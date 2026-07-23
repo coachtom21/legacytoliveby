@@ -1,0 +1,119 @@
+[
+  {
+    "file": "community-force.html",
+    "slug": "community-force",
+    "title": "Community Force | Legacy to Live By",
+    "description": "A pledge names a future intention. Trust makes coordinated action possible; fulfillment places that force into motion.",
+    "channel": "community-force",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "community-force.html"
+  },
+  {
+    "file": "community-pulse.html",
+    "slug": "community-pulse",
+    "title": "Community Pulse | Legacy to Live By",
+    "description": "Community Pulse makes consented activity visible without turning people into scores.",
+    "channel": "community-pulse",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "community-pulse.html"
+  },
+  {
+    "file": "community-reflection.html",
+    "slug": "community-reflection",
+    "title": "Twelve-Week Snapshot | Legacy to Live By",
+    "description": "The snapshot is a culmination of the complete twelve-week dataset, not the final step in a prescribed participant sequence.",
+    "channel": "twelve-week-snapshot",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "community-reflection.html"
+  },
+  {
+    "file": "discord-gracebook.html",
+    "slug": "discord-gracebook",
+    "title": "Discord Gracebook | Legacy to Live By",
+    "description": "Discord Gracebook is the active conversation and organizing space behind the public LLB community center.",
+    "channel": "discord-gracebook",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "discord-gracebook.html"
+  },
+  {
+    "file": "human-gold-rush.html",
+    "slug": "llb-welcome",
+    "title": "Human Gold Rush | Legacy to Live By",
+    "description": "Explore how community force is built without money. Churches, merchants, community centers, and neighbors gather through LAUGH (Leaders Annual United Group Hug) events to practice trust, recognize gratitude, and fulfill future plans.",
+    "channel": "welcome",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "human-gold-rush.html"
+  },
+  {
+    "file": "laugh-events.html",
+    "slug": "laugh-events",
+    "title": "LAUGH Events | Legacy to Live By",
+    "description": "Find or host local gatherings where trust, gratitude, future plans, and fulfillment opportunities become visible.",
+    "channel": "laugh-events",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "laugh-events.html"
+  },
+  {
+    "file": "prepare-laugh-event.html",
+    "slug": "prepare-laugh-event",
+    "title": "Prepare a LAUGH Event | Legacy to Live By",
+    "description": "A LAUGH event turns a church, merchant, community center, or neighborhood gathering place into a local fulfillment epicenter.",
+    "channel": "host-a-laugh-event",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "prepare-laugh-event.html"
+  },
+  {
+    "file": "proof-of-fulfillment.html",
+    "slug": "proof-of-fulfillment",
+    "title": "Proof of Fulfillment | Legacy to Live By",
+    "description": "Technology may record completion, but the human act of follow-through comes first.",
+    "channel": "proof-of-fulfillment",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "proof-of-fulfillment.html"
+  },
+  {
+    "file": "research-technology.html",
+    "slug": "research-technology",
+    "title": "Technology & Research | Legacy to Live By",
+    "description": "The proposed research system preserves study-relevant behavioral events while minimizing human input and avoiding heavy personal-data imports.",
+    "channel": "research-technology",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "research-technology.html"
+  },
+  {
+    "file": "resources.html",
+    "slug": "resources",
+    "title": "Lesson & Media Library | Legacy to Live By",
+    "description": "Videos, podcasts, transcripts, facilitator materials, and event tools live inside the lessons they support and remain searchable here.",
+    "channel": "resource-library",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "resources.html"
+  },
+  {
+    "file": "stories-trust-motion.html",
+    "slug": "stories-trust-motion",
+    "title": "Stories of Trust in Motion | Legacy to Live By",
+    "description": "The complete story includes promises, attempts, completions, surprises, disputes, gratitude, and walk-aways.",
+    "channel": "stories-of-trust",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "stories-trust-motion.html"
+  },
+  {
+    "file": "three-ways-to-respond.html",
+    "slug": "three-ways-to-respond",
+    "title": "Three Ways to Respond | Legacy to Live By",
+    "description": "Human Gold Rush encounters are invitations, not conversion funnels.",
+    "channel": "three-ways-to-respond",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "three-ways-to-respond.html"
+  },
+  {
+    "file": "tigers-eye-covenant.html",
+    "slug": "tigers-eye-covenant",
+    "title": "The Tiger\u2019s Eye Covenant | Legacy to Live By",
+    "description": "A touchstone held in the hand can create a pause long enough to choose how we meet another person.",
+    "channel": "tigers-eye-covenant",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "tigers-eye-covenant.html"
+  }
+]

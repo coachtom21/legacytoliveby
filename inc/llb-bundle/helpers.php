@@ -90,6 +90,11 @@ function hello_elementor_child_llb_discord_url() {
 function hello_elementor_child_llb_rewrite_links( $html ) {
 	foreach ( hello_elementor_child_llb_url_map() as $file => $url ) {
 		$html = str_replace( 'href="' . $file . '"', 'href="' . esc_url( $url ) . '"', $html );
+		$html = preg_replace(
+			'#href="' . preg_quote( $file, '#' ) . '(\?[^"]*)"#',
+			'href="' . esc_url( $url ) . '$1"',
+			$html
+		);
 	}
 
 	$html = str_replace(

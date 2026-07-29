@@ -68,6 +68,17 @@
       if (hidden) {
         hidden.value = b.dataset.branch;
       }
+      var observe = document.querySelector("#observe-link");
+      if (observe) {
+        observe.classList.remove("disabled");
+        observe.removeAttribute("aria-disabled");
+        var gracebookBase =
+          window.llbBundle && window.llbBundle.gracebookUrl
+            ? window.llbBundle.gracebookUrl
+            : "discord-gracebook.html";
+        observe.href = gracebookBase + "?branch=" + encodeURIComponent(b.dataset.branch);
+        observe.title = "";
+      }
     });
   });
 })();

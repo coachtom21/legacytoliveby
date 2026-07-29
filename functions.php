@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.0.9' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.1.0' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
@@ -149,6 +149,14 @@ function hello_elementor_child_llb_assets() {
 		array(),
 		HELLO_ELEMENTOR_CHILD_VERSION,
 		true
+	);
+
+	wp_localize_script(
+		'llb-bundle',
+		'llbBundle',
+		array(
+			'gracebookUrl' => hello_elementor_child_llb_page_url( 'discord-gracebook' ),
+		)
 	);
 
 	$dequeue = array(

@@ -14,10 +14,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.1.0' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.2.0' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
+
+/**
+ * Use the HGR landing template only on the site root — not on /llb-welcome/.
+ *
+ * @param string $template Path to the template file.
+ * @return string
+ */
+function hello_elementor_child_root_landing_template( $template ) {
+	if ( is_admin() || ! hello_elementor_child_is_site_root() ) {
+		return $template;
+	}
+
+	$landing = get_stylesheet_directory() . '/page-human-gold-rush.php';
+
+	return file_exists( $landing ) ? $landing : $template;
+}
+add_filter( 'template_include', 'hello_elementor_child_root_landing_template', 99 );
 
 /**
  * Load child theme scripts & styles.
@@ -56,10 +73,47 @@ function hello_elementor_child_hgr_assets() {
 	);
 
 	wp_enqueue_style(
+		'llb-bundle-fonts',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap',
+		array(),
+		null
+	);
+
+	wp_enqueue_style(
+		'llb-bundle',
+		get_stylesheet_directory_uri() . '/assets/llb-bundle/styles.css',
+		array( 'llb-bundle-fonts' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_enqueue_style(
+		'llb-bundle-overrides',
+		get_stylesheet_directory_uri() . '/assets/llb-bundle/llb-overrides.css',
+		array( 'llb-bundle' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_enqueue_style(
 		'hgr-join',
 		get_stylesheet_directory_uri() . '/assets/hgr/join.css',
-		[ 'hgr-fonts' ],
+		array( 'hgr-fonts', 'llb-bundle-overrides' ),
 		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_enqueue_script(
+		'llb-bundle',
+		get_stylesheet_directory_uri() . '/assets/llb-bundle/app.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+
+	wp_localize_script(
+		'llb-bundle',
+		'llbBundle',
+		array(
+			'gracebookUrl' => hello_elementor_child_llb_page_url( 'discord-gracebook' ),
+		)
 	);
 
 	wp_enqueue_script(
@@ -73,13 +127,19 @@ function hello_elementor_child_hgr_assets() {
 	// Keep Elementor header styles; drop only page/theme chrome that fights the landing layout.
 	$dequeue_styles = [
 		'hello-elementor-child-style',
+		'hello-elementor',
 		'hello-elementor-theme-style',
 		'hello-elementor-header-footer',
+		'elementor-frontend',
+		'elementor-post-6',
+		'elementor-post-20',
+		'elementor-post-122',
 		'wp-block-library',
 	];
 
 	foreach ( $dequeue_styles as $handle ) {
 		wp_dequeue_style( $handle );
+		wp_deregister_style( $handle );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_hgr_assets', 100 );
@@ -94,6 +154,7 @@ function hello_elementor_child_hgr_disable_theme_builder_footer() {
 		return;
 	}
 
+	remove_all_actions( 'elementor/theme/header' );
 	remove_all_actions( 'elementor/theme/footer' );
 }
 add_action( 'template_redirect', 'hello_elementor_child_hgr_disable_theme_builder_footer', 5 );

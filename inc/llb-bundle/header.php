@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$welcome_url = hello_elementor_child_llb_page_url( 'llb-welcome' );
+$welcome_url = isset( $llb_brand_url ) ? $llb_brand_url : hello_elementor_child_llb_page_url( 'llb-welcome' );
 $logo_id     = (int) get_theme_mod( 'custom_logo' );
 ?>
 <header class="llb-header">

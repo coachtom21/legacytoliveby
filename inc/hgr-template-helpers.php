@@ -10,12 +10,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Whether the request is the site root URL (not /llb-welcome/ etc.).
+ *
+ * WordPress treats the static front page as is_front_page() on both / and its
+ * canonical slug — we only want the landing layout on the root path.
+ *
+ * @return bool
+ */
+function hello_elementor_child_is_site_root() {
+	if ( ! is_front_page() ) {
+		return false;
+	}
+
+	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH ), '/' );
+
+	return '' === $path || 'index.php' === $path;
+}
+
+/**
  * Whether the current request uses an HGR template.
  *
  * @return bool
  */
 function hello_elementor_child_hgr_is_template() {
-	return is_page_template( 'page-human-gold-rush.php' )
+	return hello_elementor_child_is_site_root()
+		|| is_page_template( 'page-human-gold-rush.php' )
 		|| is_page_template( 'page-human-gold-rush-join.php' )
 		|| is_page_template( 'page-human-gold-rush-login.php' );
 }
@@ -26,18 +45,16 @@ function hello_elementor_child_hgr_is_template() {
  * @return string
  */
 function hello_elementor_child_hgr_landing_url() {
-	$page = get_page_by_path( 'human-gold-rush' );
-	return $page ? get_permalink( $page ) : home_url( '/human-gold-rush/' );
+	return home_url( '/' );
 }
 
 /**
- * URL for the Human Gold Rush join form page.
+ * URL for the Human Gold Rush bundle welcome page ("Join the rush").
  *
  * @return string
  */
 function hello_elementor_child_hgr_join_url() {
-	$page = get_page_by_path( 'human-gold-rush-join' );
-	return $page ? get_permalink( $page ) : home_url( '/human-gold-rush-join/' );
+	return hello_elementor_child_llb_page_url( 'llb-welcome' );
 }
 
 /**

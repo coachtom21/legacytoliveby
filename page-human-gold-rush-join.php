@@ -25,8 +25,6 @@ $login_url = hello_elementor_child_hgr_login_url();
 <body <?php body_class( 'hgr-body hgr-join-page' ); ?>>
 <?php wp_body_open(); ?>
 
-<?php hello_elementor_child_hgr_render_site_header(); ?>
-
 <div class="hgr-page">
 	<?php hello_elementor_child_hgr_render_page_nav( 'join' ); ?>
 

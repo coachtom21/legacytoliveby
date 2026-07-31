@@ -166,8 +166,8 @@ Thirteen distinct records, not twelve — the wholesale batch and the MEGAvoter-
 | Field | Type | Notes |
 |---|---|---|
 | stone_word | select | `courage` (Tiger’s Eye) \| `kindness` (Obsidian) \| `wisdom` (Howlite) \| `lucky` (Unakite) \| `belief` (Crazy Agate) \| `gratitude` (Red Jasper) \| `health` (Aventurine) \| `happiness` (White Crystal) \| `dream` (Yellow Jade) \| `believe` (Sodalite) \| `wealth` (India Agate) \| `healing` (Opal) — 12 wholesale varieties, open to any `yamer` \| `faith_covenant` (Tiger's Eye, engraved **FAITH**, not Courage) — the 13th, MEGAvoter-exclusive record, gated to `participant.pledge_tier = megavoter_12` |
-| source_type | select | `wholesale_everful` (applies to all 12 `stone_word` varieties above, including `courage`) \| `lapidary_dahlonega` (applies only to `faith_covenant`) |
-| lapidary_source | text | only populated for `faith_covenant` — cut in Dahlonega itself. The 12 wholesale varieties have no lapidary_source; they ship in from Everful |
+| source_type | select | `wholesale_everful` (applies to all 12 `stone_word` varieties above, including `courage`) \| `lapidary_cei` (applies only to `faith_covenant`) |
+| lapidary_source | text | only populated for `faith_covenant` — cut at CEI. The 12 wholesale varieties have no lapidary_source; they ship in from Everful |
 | unit_count | integer | current lot: 10 units per wholesale variety, 120 total; `faith_covenant` tracked separately, produced to local capacity |
 | backorder_status | select | `standing` \| `matched_to_donation` \| `fulfilled` |
 | pledge_value | decimal | bookkeeping only, see §0 |
@@ -191,7 +191,7 @@ Bulk home-delivery request, distinct from a single personal pickup. Gated: `part
 ### `fulfillment_center`
 | Field | Type | Notes |
 |---|---|---|
-| center_type | select | `dah_pilot` (single site today) \| `dah_licensed` (post 2027-08-11, up to 100) |
+| center_type | select | `cei_pilot` (single site today) \| `cei_licensed` (post 2027-08-11, up to 100) |
 | location | text | |
 | active | boolean | |
 
@@ -438,7 +438,7 @@ Off-chain only, never hashed to HCS. Used for fraud analytics, not for participa
 | Quarterly reconciliation and settlement | after the twelve-week dataset closes; uses the applicable monthly testaments and event record |
 | Annual reconciliation | August 31 |
 | Redemption Day | September 1 (starting 2027, annual) |
-| Pilot expansion decision point | August 11, 2027 (single DAH site → up to 100 licensed centers) |
+| Pilot expansion decision point | August 11, 2027 (single CEI site → up to 100 licensed centers) |
 | Testnet → mainnet genesis moment | May 17, 2030 — every HCS-anchored hash from the testnet period carries forward as the proof trail into the mainnet foundation; not a new starting point |
 | First mainnet settlement | September 1, 2030 — the same Redemption Day rhythm, now on the mainnet foundation |
 | Testnet control-group window | 2030–2040 (10 years post-genesis) — 1% of activity deliberately stays in the testnet environment as a standing control group, never migrated to mainnet |

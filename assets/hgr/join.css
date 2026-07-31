@@ -22,10 +22,24 @@ body.hgr-body {
   background: var(--cream);
 }
 
-/* Sit cleanly under the Elementor site header */
-body.hgr-body .elementor-location-header {
-  position: relative;
-  z-index: 100;
+body.hgr-body.llb-bundle-body {
+  background: var(--paper);
+}
+
+body.hgr-body.llb-bundle-body main .hgr-page {
+  margin: 0;
+  min-height: calc(100vh - 72px);
+  padding-bottom: 48px;
+}
+
+body.hgr-body.llb-bundle-body .hgr-wrap {
+  max-width: 820px;
+}
+
+@media (max-width: 1150px) {
+  body.hgr-body.llb-bundle-body main .hgr-page {
+    min-height: auto;
+  }
 }
 
 .hgr-page {
@@ -36,7 +50,7 @@ body.hgr-body .elementor-location-header {
     radial-gradient(ellipse 80% 50% at 50% -10%, var(--ember-light) 0%, transparent 55%),
     linear-gradient(180deg, var(--cream) 0%, #f7ebe0 100%);
   line-height: 1.55;
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
 }
 
 .hgr-page * {

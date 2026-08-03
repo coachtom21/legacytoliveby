@@ -98,6 +98,100 @@ $llb_active_file = '';
 				</div>
 			</section>
 
+			<section class="hgr-media" aria-label="<?php esc_attr_e( 'Project media', 'hello-elementor-child' ); ?>">
+				<h2><?php esc_html_e( 'Learn more', 'hello-elementor-child' ); ?></h2>
+
+				<article class="hgr-media-group">
+					<h3><?php esc_html_e( 'What this project is designed to accomplish', 'hello-elementor-child' ); ?></h3>
+					<p class="hgr-media-intro"><?php esc_html_e( 'Hope this helps understand what this project is designed to accomplish.', 'hello-elementor-child' ); ?></p>
+
+					<div class="hgr-media-item">
+						<span class="hgr-media-badge hgr-media-badge--video"><?php esc_html_e( 'Video', 'hello-elementor-child' ); ?></span>
+						<div class="hgr-video-frame hgr-media-player">
+							<video class="hgr-video-player" controls playsinline preload="metadata">
+								<source src="https://legacytoliveby.org/wp-content/uploads/2026/08/Architecting_the_Decoupled_DAO__The_XP_Testnet_Model.mp4" type="video/mp4">
+							</video>
+						</div>
+						<p class="hgr-media-caption"><?php esc_html_e( 'Architecting the Decoupled DAO: The XP Testnet Model', 'hello-elementor-child' ); ?></p>
+					</div>
+
+					<div class="hgr-media-item">
+						<span class="hgr-media-badge hgr-media-badge--pdf"><?php esc_html_e( 'PDF', 'hello-elementor-child' ); ?></span>
+						<a class="hgr-media-doc" href="https://drive.google.com/file/d/1lkNINRSpzmFw1hg_7-qH79YTVBtrjfMF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+							<span class="hgr-media-doc-icon" aria-hidden="true">PDF</span>
+							<span class="hgr-media-doc-text">
+								<strong><?php esc_html_e( 'Testnet Environment', 'hello-elementor-child' ); ?></strong>
+								<small><?php esc_html_e( 'Open PDF in Google Drive', 'hello-elementor-child' ); ?></small>
+							</span>
+							<span class="hgr-media-doc-arrow" aria-hidden="true">→</span>
+						</a>
+					</div>
+
+					<div class="hgr-media-item hgr-media-item--audio">
+						<div class="hgr-audio-card">
+							<span class="hgr-media-badge hgr-media-badge--podcast"><?php esc_html_e( 'Podcast', 'hello-elementor-child' ); ?></span>
+							<p class="hgr-audio-title"><?php esc_html_e( 'An economy built on human presence', 'hello-elementor-child' ); ?></p>
+							<audio class="hgr-audio-player" controls preload="metadata">
+								<source src="https://legacytoliveby.org/wp-content/uploads/2026/08/An_economy_built_on_human_presence.mp4" type="audio/mp4">
+							</audio>
+						</div>
+					</div>
+				</article>
+
+				<article class="hgr-media-group">
+					<h3><?php esc_html_e( 'Moving towards May 17, 2040', 'hello-elementor-child' ); ?></h3>
+
+					<div class="hgr-media-item">
+						<span class="hgr-media-badge hgr-media-badge--video"><?php esc_html_e( 'Video', 'hello-elementor-child' ); ?></span>
+						<div class="hgr-video-frame hgr-media-player">
+							<video class="hgr-video-player" controls playsinline preload="metadata">
+								<source src="https://legacytoliveby.org/wp-content/uploads/2026/08/The_Human_Gold_Rush__Architecting_a_0__DAO_Economy.mp4" type="video/mp4">
+							</video>
+						</div>
+						<p class="hgr-media-caption"><?php esc_html_e( 'The Human Gold Rush: Architecting a $0 DAO Economy', 'hello-elementor-child' ); ?></p>
+					</div>
+
+					<div class="hgr-media-item">
+						<span class="hgr-media-badge hgr-media-badge--pdf"><?php esc_html_e( 'PDF', 'hello-elementor-child' ); ?></span>
+						<a class="hgr-media-doc" href="https://drive.google.com/file/d/1lkNINRSpzmFw1hg_7-qH79YTVBtrjfMF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+							<span class="hgr-media-doc-icon" aria-hidden="true">PDF</span>
+							<span class="hgr-media-doc-text">
+								<strong><?php esc_html_e( 'Testnet Environment', 'hello-elementor-child' ); ?></strong>
+								<small><?php esc_html_e( 'Open PDF in Google Drive', 'hello-elementor-child' ); ?></small>
+							</span>
+							<span class="hgr-media-doc-arrow" aria-hidden="true">→</span>
+						</a>
+					</div>
+
+					<div class="hgr-media-item hgr-media-item--audio">
+						<div class="hgr-audio-card">
+							<span class="hgr-media-badge hgr-media-badge--podcast"><?php esc_html_e( 'Podcast', 'hello-elementor-child' ); ?></span>
+							<p class="hgr-audio-title"><?php esc_html_e( 'Separating human presence from financial debt', 'hello-elementor-child' ); ?></p>
+							<audio class="hgr-audio-player" controls preload="metadata">
+								<source src="https://legacytoliveby.org/wp-content/uploads/2026/08/Separating_human_presence_from_financial_debt.mp4" type="audio/mp4">
+							</audio>
+						</div>
+					</div>
+				</article>
+
+				<article class="hgr-media-group">
+					<h3><?php esc_html_e( 'Stephen Hawking message', 'hello-elementor-child' ); ?></h3>
+					<div class="hgr-media-item">
+						<span class="hgr-media-badge hgr-media-badge--video"><?php esc_html_e( 'Video', 'hello-elementor-child' ); ?></span>
+						<div class="hgr-video-frame hgr-media-player hgr-media-player--youtube">
+							<iframe
+								src="https://www.youtube.com/embed/VYxjumUhji0"
+								title="<?php esc_attr_e( 'Stephen Hawking message', 'hello-elementor-child' ); ?>"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+								loading="lazy"
+							></iframe>
+						</div>
+						<p class="hgr-media-caption"><?php esc_html_e( 'Stephen Hawking message', 'hello-elementor-child' ); ?></p>
+					</div>
+				</article>
+			</section>
+
 			<footer class="hgr-footer">
 				<?php esc_html_e( 'No money changes hands anywhere in Human Gold Rush. This page is a research-project prototype — testnet / demo only.', 'hello-elementor-child' ); ?>
 			</footer>

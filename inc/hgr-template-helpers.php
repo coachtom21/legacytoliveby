@@ -54,7 +54,7 @@ function hello_elementor_child_hgr_landing_url() {
  * @return string
  */
 function hello_elementor_child_hgr_join_url() {
-	return hello_elementor_child_llb_page_url( 'llb-welcome' );
+	return hello_elementor_child_llb_page_url( 'llb-welcome' ) . '#welcome';
 }
 
 /**

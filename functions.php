@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.2.4' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.3.1' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
@@ -27,6 +27,11 @@ require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
  */
 function hello_elementor_child_root_landing_template( $template ) {
 	if ( is_admin() || ! hello_elementor_child_is_site_root() ) {
+		return $template;
+	}
+
+	// Never replace the Welcome lesson page at the site root.
+	if ( hello_elementor_child_llb_is_welcome_template() ) {
 		return $template;
 	}
 

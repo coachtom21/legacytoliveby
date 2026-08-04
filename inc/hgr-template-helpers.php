@@ -40,6 +40,15 @@ function hello_elementor_child_hgr_is_template() {
 }
 
 /**
+ * Whether the current page is the LLB Welcome lesson (not the site landing).
+ *
+ * @return bool
+ */
+function hello_elementor_child_llb_is_welcome_template() {
+	return is_page_template( 'page-llb-welcome.php' );
+}
+
+/**
  * URL for the Human Gold Rush landing page.
  *
  * @return string
@@ -54,7 +63,7 @@ function hello_elementor_child_hgr_landing_url() {
  * @return string
  */
 function hello_elementor_child_hgr_join_url() {
-	return hello_elementor_child_llb_page_url( 'llb-welcome' ) . '#welcome';
+	return hello_elementor_child_llb_welcome_url( 'welcome' );
 }
 
 /**

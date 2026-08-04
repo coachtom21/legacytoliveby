@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$welcome_url = isset( $llb_brand_url ) ? $llb_brand_url : hello_elementor_child_llb_page_url( 'llb-welcome' );
-$logo_id     = (int) get_theme_mod( 'custom_logo' );
+$brand_url = isset( $llb_brand_url ) ? $llb_brand_url : home_url( '/' );
+$logo_id   = (int) get_theme_mod( 'custom_logo' );
 ?>
 <header class="llb-header">
-	<a class="llb-header-brand" href="<?php echo esc_url( $welcome_url ); ?>">
+	<a class="llb-header-brand" href="<?php echo esc_url( $brand_url ); ?>">
 		<?php if ( $logo_id ) : ?>
 			<?php echo wp_get_attachment_image( $logo_id, 'medium', false, array( 'class' => 'llb-header-logo-img', 'alt' => 'Legacy to Live By' ) ); ?>
 		<?php else : ?>

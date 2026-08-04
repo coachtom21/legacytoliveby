@@ -15,7 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return bool
  */
 function hello_elementor_child_llb_is_template() {
-	return is_page_template( 'page-llb-bundle.php' );
+	return is_page_template( 'page-llb-bundle.php' )
+		|| is_page_template( 'page-llb-welcome.php' );
 }
 
 /**
@@ -33,12 +34,70 @@ function hello_elementor_child_llb_pages_config() {
 }
 
 /**
+ * WordPress slugs for the Welcome page (human-gold-rush.html content).
+ *
+ * @return string[]
+ */
+function hello_elementor_child_llb_welcome_slugs() {
+	return array( 'llb-welcome', 'human-gold-rush' );
+}
+
+/**
+ * Canonical config slug for the welcome bundle page.
+ *
+ * @param string $slug Page slug.
+ * @return string
+ */
+function hello_elementor_child_llb_normalize_slug( $slug ) {
+	if ( in_array( $slug, array( 'llb-welcome', 'human-gold-rush' ), true ) ) {
+		return 'llb-welcome';
+	}
+	return $slug;
+}
+
+/**
+ * Content partial filename for a bundle page slug.
+ *
+ * @param string $slug Page slug.
+ * @return string
+ */
+function hello_elementor_child_llb_content_slug( $slug ) {
+	return hello_elementor_child_llb_normalize_slug( $slug );
+}
+
+/**
+ * Permalink for the Human Gold Rush welcome bundle page.
+ *
+ * @param string $fragment Optional hash fragment, e.g. "#welcome".
+ * @return string
+ */
+function hello_elementor_child_llb_welcome_url( $fragment = '' ) {
+	foreach ( hello_elementor_child_llb_welcome_slugs() as $slug ) {
+		$page = get_page_by_path( $slug );
+		if ( $page ) {
+			$url = get_permalink( $page );
+			if ( $fragment ) {
+				$url .= '#' . ltrim( $fragment, '#' );
+			}
+			return $url;
+		}
+	}
+
+	$url = home_url( '/llb-welcome/' );
+	if ( $fragment ) {
+		$url .= '#' . ltrim( $fragment, '#' );
+	}
+	return $url;
+}
+
+/**
  * Config for a bundle page slug.
  *
  * @param string $slug Page slug.
  * @return array<string, string>|null
  */
 function hello_elementor_child_llb_page_config( $slug ) {
+	$slug = hello_elementor_child_llb_normalize_slug( $slug );
 	foreach ( hello_elementor_child_llb_pages_config() as $page ) {
 		if ( isset( $page['slug'] ) && $page['slug'] === $slug ) {
 			return $page;
@@ -67,7 +126,11 @@ function hello_elementor_child_llb_url_map() {
 	$map = array();
 	foreach ( hello_elementor_child_llb_pages_config() as $page ) {
 		if ( ! empty( $page['file'] ) && ! empty( $page['slug'] ) ) {
-			$map[ $page['file'] ] = hello_elementor_child_llb_page_url( $page['slug'] );
+			if ( 'human-gold-rush.html' === $page['file'] ) {
+				$map[ $page['file'] ] = hello_elementor_child_llb_welcome_url();
+			} else {
+				$map[ $page['file'] ] = hello_elementor_child_llb_page_url( $page['slug'] );
+			}
 		}
 	}
 	return $map;
@@ -157,7 +220,8 @@ function hello_elementor_child_llb_nav_groups() {
  * @return void
  */
 function hello_elementor_child_llb_render_content( $slug ) {
-	$path = get_stylesheet_directory() . '/inc/llb-bundle/content/' . $slug . '.php';
+	$content_slug = hello_elementor_child_llb_content_slug( $slug );
+	$path         = get_stylesheet_directory() . '/inc/llb-bundle/content/' . $content_slug . '.php';
 	if ( ! file_exists( $path ) ) {
 		echo '<div class="page-wrap"><p>Content not found.</p></div>';
 		return;

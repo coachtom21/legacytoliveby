@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: LLB Community Bundle
+ * Template Name: LLB Welcome
  * Template Post Type: page
  *
- * Legacy to Live By — Codepixelzmedia publishing bundle pages.
+ * Human Gold Rush welcome lesson (human-gold-rush.html). Use slug: llb-welcome.
  *
  * @package HelloElementorChild
  */
@@ -14,24 +14,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 
-$slug   = get_post_field( 'post_name', get_the_ID() );
-$config = hello_elementor_child_llb_page_config( $slug );
-
-if ( ! $config ) {
-	wp_safe_redirect( hello_elementor_child_llb_welcome_url() );
-	exit;
-}
-
-$llb_active_file = $config['file'];
-$page_title      = $config['title'];
-$page_desc       = $config['description'];
+$slug            = 'llb-welcome';
+$config          = hello_elementor_child_llb_page_config( $slug );
+$llb_active_file = $config ? $config['file'] : 'human-gold-rush.html';
+$page_title      = $config ? $config['title'] : __( 'Human Gold Rush | Legacy to Live By', 'hello-elementor-child' );
+$page_desc       = $config ? $config['description'] : '';
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo esc_html( $page_title ); ?></title>
+	<?php if ( $page_desc ) : ?>
 	<meta name="description" content="<?php echo esc_attr( $page_desc ); ?>">
+	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'llb-bundle-body' ); ?>>

@@ -1,9 +1,10 @@
 <?php
 /**
- * Template Name: Human Gold Rush — Landing
+ * Template Name: Human Gold Rush
  * Template Post Type: page
  *
- * Human Gold Rush marketing landing page (no forms).
+ * Site landing page: First Principle video, hero, and Learn more media.
+ * Used automatically at /. Do not use for the Welcome lesson page.
  *
  * @package HelloElementorChild
  */

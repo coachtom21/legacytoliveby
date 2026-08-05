@@ -28,7 +28,16 @@ function hello_elementor_child_is_site_root() {
 }
 
 /**
- * Whether the current request uses an HGR template.
+ * Whether the current page uses the God Wink template.
+ *
+ * @return bool
+ */
+function hello_elementor_child_hgr_is_god_wink_template() {
+	return is_page_template( 'page-god-wink.php' );
+}
+
+/**
+ * Whether the current request uses an HGR landing/join/login template.
  *
  * @return bool
  */
@@ -58,12 +67,54 @@ function hello_elementor_child_hgr_landing_url() {
 }
 
 /**
- * URL for the Human Gold Rush bundle welcome page ("Join the rush").
+ * URL for the God Wink enhanced welcome page.
+ *
+ * @param string $fragment Optional hash fragment.
+ * @return string
+ */
+function hello_elementor_child_hgr_god_wink_url( $fragment = '' ) {
+	$page = get_page_by_path( 'god-wink' );
+	$url  = $page ? get_permalink( $page ) : home_url( '/god-wink/' );
+	if ( $fragment ) {
+		$url .= '#' . ltrim( $fragment, '#' );
+	}
+	return $url;
+}
+
+/**
+ * Human Blockchain device registration URL.
+ *
+ * @return string
+ */
+function hello_elementor_child_hbc_register_url() {
+	return 'https://humanblockchain.info/';
+}
+
+/**
+ * $0 touchstone backorder / RSVP entry (Host a LAUGH Event flow).
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_touchstone_order_url() {
+	return hello_elementor_child_llb_page_url( 'prepare-laugh-event' );
+}
+
+/**
+ * Centerpiece touchstone image for God Wink (Google Drive until uploaded to media library).
+ *
+ * @return string
+ */
+function hello_elementor_child_god_wink_touchstone_image_url() {
+	return 'https://legacytoliveby.org/wp-content/uploads/2026/08/unnamed.jpg';
+}
+
+/**
+ * URL for "Join the rush" — God Wink enhanced welcome.
  *
  * @return string
  */
 function hello_elementor_child_hgr_join_url() {
-	return hello_elementor_child_llb_welcome_url( 'welcome' );
+	return hello_elementor_child_hgr_god_wink_url();
 }
 
 /**

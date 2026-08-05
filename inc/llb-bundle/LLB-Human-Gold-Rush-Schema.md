@@ -502,3 +502,50 @@ Reference cost model from Codepixelzmedia (at $0.0008/HCS message, accepted-even
 8. Treat the MEGAvoter seller as VFN for that seller's own YAM-is-ON vouchers. The seller posts the month-end testament directly; do not invent a separate VFN reviewer or mark the attestation verified merely because it was posted.
 9. Enforce the 51% reissuance threshold per issuing identity and current lot. Never calculate it as a lifetime cumulative rate, and never pool a member's personal lot into a group/guild lot.
 10. Monthly testaments are reconciliation artifacts. Monetary settlement is recorded only at the applicable twelve-week quarterly close so the fiat testament and XP Presence dataset share the same reporting boundary.
+
+---
+
+## 9. Testnet XP immutability (May 2030 Detente model)
+
+Source: `TESTNET-EXPLAINED.md` (Coach Tom / platform architecture, 2026).
+
+### Principles
+
+1. **Pre-genesis (now through May 16, 2030):** 100% of Human Gold Rush presence accrues as testnet XP — proof of human presence, not financial value.
+2. **May 17, 2030 (genesis):** Mainnet may adopt **99%** of the proven operational framework. **At least 1%** remains a permanent human-behavior testnet; it is never migrated, consumed, or extinguished.
+3. **2030–2040:** The standing 1% testnet control group continues as a ten-year observation window (see `participant.network_environment = testnet_control_group`).
+4. **May 17, 2040:** Next Detente moment; testnet presence history from the prior cycle is **carried forward**, not reset.
+
+### Testnet XP lifecycle (presence record)
+
+Use for `qr_scan_event` / XP presence — **not** for fiat obligations:
+
+| Stage | Meaning |
+|---|---|
+| `observed` | Scan or interaction recorded |
+| `confirmed` | Two-device or witness-weighted acceptance |
+| `reconciled` | Included in May 16 / quarterly snapshot |
+| `recognized` | Interpretation attached; disputes may qualify, not erase |
+| `carried_forward` | Permanent retention; never extinguished |
+
+**Forbidden for testnet XP:** `extinguished`, `redeemed`, `transferred`, `spent`, `deleted`, or in-place UPDATE of historical presence rows.
+
+### Extinguishment scope
+
+`extinguished` (and `extinguishment_reason`) in §3 obligation tables applies only to:
+
+- fiat-side obligations outside the XP presence ledger, and
+- mainnet settlement entries after genesis,
+
+— **never** to testnet XP proof-of-presence, consent events, or behavioral append-only evidence. If a pledge obligation is extinguished, the underlying presence events remain.
+
+### Reconciliation vs disposition
+
+Quarterly and annual reconciliation produces a **dated interpretation** (snapshot, testament, merkle checkpoint) — not a terminal disposition of presence. May 16 reconciliation → May 17 genesis references operational lessons; it does not consume underlying XP rows.
+
+### Implementation notes for Cursor
+
+1. Enforce separate tables or `record_layer` discriminator: `presence` | `fiat_obligation` | `mainnet_settlement`.
+2. Database triggers: reject UPDATE/DELETE on testnet presence events; corrections via appended `CORRECTION_POSTED` events only.
+3. Admin UI: warn if any migration or report treats testnet XP as extinguishable.
+4. Public copy: never promise redemption, transfer, or reset of testnet presence.

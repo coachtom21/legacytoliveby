@@ -229,6 +229,9 @@ function hello_elementor_child_llb_render_content( $slug ) {
 	ob_start();
 	echo '<div class="page-wrap">';
 	include $path;
+	if ( 'llb-welcome' === hello_elementor_child_llb_normalize_slug( $slug ) ) {
+		include get_stylesheet_directory() . '/inc/llb-bundle/content/human-gold-rush-essay.php';
+	}
 	echo '</div>';
 	$html = ob_get_clean();
 	echo hello_elementor_child_llb_rewrite_links( $html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

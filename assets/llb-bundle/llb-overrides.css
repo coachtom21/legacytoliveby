@@ -253,3 +253,48 @@ body.llb-sidebar-open {
     padding: 40px 20px 70px;
   }
 }
+
+/* human-gold-rush.md essay (Welcome lesson) */
+.llb-essay {
+  margin: 0 0 56px;
+  padding: 40px 44px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffdfa 0%, #f8f1e4 100%);
+  box-shadow: var(--shadow);
+}
+
+.llb-essay-inner {
+  max-width: 720px;
+}
+
+.llb-essay h2 {
+  margin: 0 0 22px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  line-height: 1.15;
+}
+
+.llb-essay h3 {
+  margin: 36px 0 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.45rem;
+  color: var(--amber);
+}
+
+.llb-essay p {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.llb-essay p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .llb-essay {
+    padding: 28px 22px;
+  }
+}

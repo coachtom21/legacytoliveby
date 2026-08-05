@@ -1,0 +1,21 @@
+# The Human Gold Rush
+
+There's a 1% that no amount of money can buy: gratitude. Real gratitude. Not the kind you say when someone hands you something, but the kind you feel when someone shows up for you — at the moment it actually mattered, not a moment that was convenient for them.
+
+That 1% is earned, never purchased. It's earned by presence. By the person who showed up to the hospital room, the graduation, the 6 a.m. practice, the phone call at 11 p.m. when nothing could be fixed but someone still answered. You can't invoice for that. You can't discount it. It doesn't scale, and it doesn't need to.
+
+The other 99% can stay money. Let it. Money is efficient at what it does — it moves goods, pays debts, builds things. Nobody's asking it to stop being useful. But we've let it creep into territory it was never built for, mistaking a raise for recognition, a bonus for belonging, a gift card for gratitude. Money is a fine tool and a terrible substitute.
+
+This is the idea behind the Human Gold Rush: what people are actually chasing, underneath the money, is presence. Being seen. Being remembered. Being thanked by someone who meant it. That's the real currency, and it's been sitting there undervalued the whole time — because it doesn't show up on a balance sheet, but it shows up in every relationship that lasts.
+
+Experience and Presence rewards work because they trade in that currency directly. Not "here's a plaque," but "I was there, I noticed, I remember." When recognition is built that way, gratitude stops being a program you run and becomes something that just happens — natural, the way it should have been all along.
+
+That's what the world should understand: the 1% that matters most was never for sale. It was always earned by showing up. Everything else is just money.
+
+## Detente 2030
+
+Somewhere out past the gratitude programs and the reward points is the point where showing up stops being an effort and becomes instinct — second nature, the way breathing is. That's the aim behind Detente 2030: not another initiative asking people to try harder at connection, but a horizon where the trying is done and presence is just how people move through a room.
+
+The LAUGH events are the proving ground for that. Gather people, strip away the performance, let laughter do what it always does — drop the guard, close the distance, tell the truth faster than any icebreaker could. Each one becomes a fulfillment XP epicenter: a place where gratitude isn't handed out, it's generated on contact, by people simply being present with each other.
+
+And the role in the room isn't to run it — it's to watch it. Stand back as an observer, take it in as behavioral research, and let the data confirm what already feels true: presence, freely given, is the only reward that never depreciates.

@@ -33,10 +33,8 @@ $llb_active_file = '';
 <a class="skip" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor-child' ); ?></a>
 
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/header.php'; ?>
+<?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/sidebar.php'; ?>
-
-<main id="main">
-	<div class="hgr-page">
 		<div class="hgr-wrap hgr-hero">
 			<span class="hgr-badge hgr-reveal"><?php esc_html_e( 'Testnet demo — no real accounts', 'hello-elementor-child' ); ?></span>
 			<h1 class="hgr-reveal hgr-reveal-delay-1"><?php esc_html_e( 'Show up. Strike gold. Carry the proof.', 'hello-elementor-child' ); ?></h1>

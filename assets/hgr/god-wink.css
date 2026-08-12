@@ -51,6 +51,11 @@ body.god-wink-body a.gw-btn-ghost {
   color: #fff;
 }
 
+body.god-wink-body .llb-trifecta a,
+body.god-wink-body .gw-trifecta a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 body.god-wink-body img {
   max-width: 100%;
 }
@@ -148,7 +153,8 @@ body.god-wink-body :focus-visible {
   font-size: 1.14rem;
 }
 
-.gw-trifecta {
+.gw-trifecta,
+.llb-trifecta {
   position: relative;
   z-index: 12;
   margin-top: -1px;
@@ -158,15 +164,19 @@ body.god-wink-body :focus-visible {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.gw-trifecta-inner {
+.gw-trifecta-inner,
+.llb-trifecta-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px 18px;
+  width: min(calc(100% - 40px), var(--gw-max, 1180px));
+  margin-inline: auto;
 }
 
-.gw-trifecta-label {
+.gw-trifecta-label,
+.llb-trifecta-label {
   color: #f1c77e;
   font-size: 0.72rem;
   font-weight: 850;
@@ -174,7 +184,8 @@ body.god-wink-body :focus-visible {
   text-transform: uppercase;
 }
 
-.gw-trifecta a {
+.gw-trifecta a,
+.llb-trifecta a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -187,7 +198,8 @@ body.god-wink-body :focus-visible {
   text-decoration: none;
 }
 
-.gw-trifecta a:hover {
+.gw-trifecta a:hover,
+.llb-trifecta a:hover {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.06);
 }
@@ -615,17 +627,36 @@ body.god-wink-body :focus-visible {
 }
 
 .gw-sequence {
-  background: linear-gradient(180deg, var(--gw-paper), #eee2ce);
+  background: linear-gradient(180deg, var(--gw-paper) 0%, #eee2ce 100%);
+}
+
+.gw-sequence .gw-section-heading {
+  max-width: 830px;
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
+.gw-sequence .gw-section-heading h2 {
+  max-width: 790px;
+  margin: 0 auto 24px;
+}
+
+.gw-sequence .gw-section-heading p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.75;
 }
 
 .gw-steps {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  counter-reset: step;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
 }
 
 .gw-step {
   position: relative;
+  min-width: 0;
   padding: 0 24px;
   text-align: center;
 }
@@ -634,33 +665,42 @@ body.god-wink-body :focus-visible {
   content: "";
   position: absolute;
   top: 27px;
-  left: 70%;
-  width: 60%;
+  right: -19px;
+  left: auto;
+  width: 38px;
   height: 1px;
-  background: rgba(148, 104, 36, 0.35);
+  background: var(--gw-line);
 }
 
 .gw-step-icon {
+  display: grid;
   width: 56px;
   height: 56px;
-  display: grid;
+  margin: 0 auto 28px;
   place-items: center;
-  margin: 0 auto 20px;
-  border: 1px solid rgba(148, 104, 36, 0.35);
+  border: 1px solid rgba(189, 143, 69, 0.62);
   border-radius: 50%;
-  color: var(--gw-gold-dark);
-  background: var(--gw-paper);
-  font-family: Georgia, serif;
-  font-weight: 800;
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--gw-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .gw-step h3 {
-  font-size: 1.08rem;
+  min-height: 58px;
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.28;
 }
 
 .gw-step p {
+  margin: 0;
   color: var(--gw-muted);
-  font-size: 0.88rem;
+  font-size: 0.875rem;
+  line-height: 1.72;
 }
 
 .gw-laugh {
@@ -968,34 +1008,38 @@ body.god-wink-body :focus-visible {
   }
 
   .gw-steps {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 0;
+  }
+
+  .gw-step:last-child {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
   }
 
   .gw-step {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 18px;
-    text-align: left;
-    padding: 12px 0;
+    padding: 0 24px;
+    text-align: center;
+    display: block;
   }
 
   .gw-step-icon {
-    margin: 0;
-    grid-row: 1 / 3;
+    margin: 0 auto 28px;
+    grid-row: auto;
   }
 
-  .gw-step h3,
+  .gw-step h3 {
+    min-height: auto;
+    margin: 0 0 16px;
+  }
+
   .gw-step p {
     margin: 0;
   }
 
   .gw-step:not(:last-child)::after {
-    top: 75px;
-    bottom: -12px;
-    left: 27px;
-    width: 1px;
-    height: auto;
+    display: none;
   }
 
   .gw-footer-grid {
@@ -1061,6 +1105,25 @@ body.god-wink-body :focus-visible {
 
   .gw-footer-brand {
     grid-column: auto;
+  }
+
+  .gw-sequence .gw-section-heading {
+    margin-bottom: 52px;
+  }
+
+  .gw-steps,
+  .gw-step:last-child {
+    grid-template-columns: 1fr;
+    width: auto;
+    grid-column: auto;
+  }
+
+  .gw-step {
+    padding: 0 12px;
+  }
+
+  .gw-step h3 {
+    min-height: 0;
   }
 }
 

@@ -36,6 +36,7 @@ $page_desc       = $config ? $config['description'] : '';
 <a class="skip" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor-child' ); ?></a>
 
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/header.php'; ?>
+<?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/sidebar.php'; ?>
 
 <main id="main">

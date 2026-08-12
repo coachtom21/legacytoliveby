@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.4.5' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.4.7' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';

@@ -79,14 +79,7 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 		</div>
 	</section>
 
-	<div class="gw-trifecta" aria-label="<?php esc_attr_e( 'Onboarding trifecta', 'hello-elementor-child' ); ?>">
-		<div class="gw-trifecta-inner gw-container">
-			<span class="gw-trifecta-label"><?php esc_html_e( 'Your next steps', 'hello-elementor-child' ); ?></span>
-			<a href="<?php echo esc_url( $hbc_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( '1 · Register your device', 'hello-elementor-child' ); ?></a>
-			<a href="<?php echo esc_url( $rsvp_url ); ?>"><?php esc_html_e( '2 · Order your touchstone', 'hello-elementor-child' ); ?></a>
-			<a href="<?php echo esc_url( $discord_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( '3 · Accept Discord Gracebook', 'hello-elementor-child' ); ?></a>
-		</div>
-	</div>
+	<?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
 
 	<section class="gw-onboard gw-section" aria-labelledby="onboard-title">
 		<div class="gw-container">
@@ -190,14 +183,34 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 			<div class="gw-section-heading">
 				<span class="gw-eyebrow"><?php esc_html_e( 'The MEGA measurement', 'hello-elementor-child' ); ?></span>
 				<h2 id="sequence-title"><?php esc_html_e( 'Intention begins the record. Presence gives it meaning.', 'hello-elementor-child' ); ?></h2>
-				<p><?php esc_html_e( 'The RSVP is not the outcome. It records anticipated demand and an intention to come. Showing up, accepting delivery, and confirming the moment allow reputation to mature.', 'hello-elementor-child' ); ?></p>
+				<p><?php esc_html_e( 'Can you practice FAITH by being Fair, Accepting, Insightful, Transparent, and Humble in your relationships with others? Decide now, later, or not at all. The RSVP measures anticipated demand. Showing up reveals presence.', 'hello-elementor-child' ); ?></p>
 			</div>
 			<div class="gw-steps">
-				<article class="gw-step"><span class="gw-step-icon">1</span><h3><?php esc_html_e( 'RSVP your intention', 'hello-elementor-child' ); ?></h3><p><?php esc_html_e( 'A $0 backorder records anticipated demand. No card is required.', 'hello-elementor-child' ); ?></p></article>
-				<article class="gw-step"><span class="gw-step-icon">2</span><h3><?php esc_html_e( 'Receive the invitation', 'hello-elementor-child' ); ?></h3><p><?php esc_html_e( 'Your postcard connects you to a local fulfillment opportunity.', 'hello-elementor-child' ); ?></p></article>
-				<article class="gw-step"><span class="gw-step-icon">3</span><h3><?php esc_html_e( 'Show up by choice', 'hello-elementor-child' ); ?></h3><p><?php esc_html_e( 'Attend a LAUGH event when your touchstone is ready.', 'hello-elementor-child' ); ?></p></article>
-				<article class="gw-step"><span class="gw-step-icon">4</span><h3><?php esc_html_e( 'Accept presence', 'hello-elementor-child' ); ?></h3><p><?php esc_html_e( 'Two scans confirm that delivery happened and was accepted.', 'hello-elementor-child' ); ?></p></article>
-				<article class="gw-step"><span class="gw-step-icon">5</span><h3><?php esc_html_e( 'Mature reputation', 'hello-elementor-child' ); ?></h3><p><?php esc_html_e( 'The experience remains pending through the complete 12-week quarter.', 'hello-elementor-child' ); ?></p></article>
+				<article class="gw-step">
+					<span class="gw-step-icon">1</span>
+					<h3><?php esc_html_e( 'Receive the invitation', 'hello-elementor-child' ); ?></h3>
+					<p><?php esc_html_e( 'Take a Practice FAITH RSVP postcard. Scan it when curious, or keep it until you are ready. There is no penalty or judgment either way.', 'hello-elementor-child' ); ?></p>
+				</article>
+				<article class="gw-step">
+					<span class="gw-step-icon">2</span>
+					<h3><?php esc_html_e( 'Choose one word', 'hello-elementor-child' ); ?></h3>
+					<p><?php esc_html_e( 'Register your device through HBC, review the present-consent terms, and choose the one touchstone word—from twelve—that resonates with you.', 'hello-elementor-child' ); ?></p>
+				</article>
+				<article class="gw-step">
+					<span class="gw-step-icon">3</span>
+					<h3><?php esc_html_e( 'RSVP your intention', 'hello-elementor-child' ); ?></h3>
+					<p><?php esc_html_e( 'Your selection creates one exact $0 WooCommerce backorder. No card is required, no payment is collected, and no extra giveaway stone is ordered.', 'hello-elementor-child' ); ?></p>
+				</article>
+				<article class="gw-step">
+					<span class="gw-step-icon">4</span>
+					<h3><?php esc_html_e( 'Return for LAUGH', 'hello-elementor-child' ); ?></h3>
+					<p><?php esc_html_e( 'Scan again to see whether local pickup is scheduled. Continue as a YAM’er Observer or voluntary MEGAvoter Participant. Your selection is reserved only for your RSVP.', 'hello-elementor-child' ); ?></p>
+				</article>
+				<article class="gw-step">
+					<span class="gw-step-icon">5</span>
+					<h3><?php esc_html_e( 'Show up and choose', 'hello-elementor-child' ); ?></h3>
+					<p><?php esc_html_e( 'Leave your wallet at home. Two device scans record accept, observe, dispute, or walk away. Acceptance is a private FAITH covenant—not proof of character or human worth.', 'hello-elementor-child' ); ?></p>
+				</article>
 			</div>
 		</div>
 	</section>

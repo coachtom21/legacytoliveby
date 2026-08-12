@@ -298,3 +298,65 @@ body.llb-sidebar-open {
     padding: 28px 22px;
   }
 }
+
+/* Onboarding trifecta — landing + Welcome (+ shared with God Wink) */
+.llb-trifecta {
+  position: relative;
+  z-index: 35;
+  padding: 12px 16px;
+  color: #fff;
+  background: rgba(9, 26, 42, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.llb-trifecta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.llb-trifecta-label {
+  color: #f1c77e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.llb-trifecta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.llb-trifecta a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+body.llb-bundle-body .llb-trifecta {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .llb-trifecta-inner {
+    gap: 8px;
+  }
+
+  .llb-trifecta a {
+    width: 100%;
+    justify-content: center;
+  }
+}

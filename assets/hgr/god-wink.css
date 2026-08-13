@@ -157,10 +157,10 @@ body.god-wink-body :focus-visible {
 .llb-trifecta {
   position: relative;
   z-index: 12;
-  margin-top: -1px;
+  margin-top: 0;
   padding: 14px 0;
   color: white;
-  background: rgba(9, 26, 42, 0.92);
+  background: rgba(9, 26, 42, 0.96);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -205,10 +205,12 @@ body.god-wink-body :focus-visible {
 }
 
 .gw-site-header {
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   color: white;
+  background: rgba(9, 26, 42, 0.94);
+  backdrop-filter: blur(10px);
 }
 
 .gw-nav {
@@ -972,7 +974,7 @@ body.god-wink-body :focus-visible {
   }
 
   .gw-hero-inner {
-    padding-top: 132px;
+    padding-top: 28px;
   }
 
   .gw-hero-copy {

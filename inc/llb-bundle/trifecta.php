@@ -14,7 +14,7 @@ require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 
 $hbc_url     = hello_elementor_child_hbc_register_url();
-$rsvp_url    = hello_elementor_child_hgr_touchstone_order_url();
+$rsvp_url    = hello_elementor_child_llb_welcome_url( 'welcome' );
 $discord_url = hello_elementor_child_llb_discord_url();
 ?>
 <div class="llb-trifecta" aria-label="<?php esc_attr_e( 'Onboarding trifecta', 'hello-elementor-child' ); ?>">

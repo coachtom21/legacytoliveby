@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.4.7' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.5.2' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
@@ -40,6 +40,29 @@ function hello_elementor_child_root_landing_template( $template ) {
 	return file_exists( $landing ) ? $landing : $template;
 }
 add_filter( 'template_include', 'hello_elementor_child_root_landing_template', 99 );
+
+/**
+ * Force /llb-welcome/ onto the Welcome template (includes trifecta).
+ * WP admin may still have "LLB Community Bundle" assigned.
+ *
+ * @param string $template Path to the template file.
+ * @return string
+ */
+function hello_elementor_child_welcome_page_template( $template ) {
+	if ( is_admin() || ! is_singular( 'page' ) ) {
+		return $template;
+	}
+
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	if ( ! in_array( $slug, hello_elementor_child_llb_welcome_slugs(), true ) ) {
+		return $template;
+	}
+
+	$welcome = get_stylesheet_directory() . '/page-llb-welcome.php';
+
+	return file_exists( $welcome ) ? $welcome : $template;
+}
+add_filter( 'template_include', 'hello_elementor_child_welcome_page_template', 100 );
 
 /**
  * Load child theme scripts & styles.

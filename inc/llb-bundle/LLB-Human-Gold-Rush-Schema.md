@@ -31,9 +31,9 @@ The `$0` WooCommerce backorder is an RSVP/inventory reservation record. It is no
 | Proof of delivery | `$0.30` | PoD service allocation |
 | **Total** | **`$30.00`** | |
 
-The four community lines total `$10.30`. The complete economic identity is:
+The four community lines total `$10.30`. The complete economic identity uses **research dotted equality** (`≐`) — comparison only, never convertible redemption (see `RESEARCH-EQUALITY.md`):
 
-`$10 COGS + $9.70 seller margin + $10.30 community value = $30`.
+`$10 COGS + $9.70 seller margin + $10.30 community value ≐ $30`.
 
 Seeking Gratitude mirrors the `$30` allocation pattern in XP only. Its fields must never join to a payout, payment, rebate, or settlement instruction.
 

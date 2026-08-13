@@ -68,16 +68,16 @@
       if (hidden) {
         hidden.value = b.dataset.branch;
       }
-      var observe = document.querySelector("#observe-link");
-      if (observe) {
-        observe.classList.remove("disabled");
-        observe.removeAttribute("aria-disabled");
+      var gracebook = document.querySelector("#gracebook-link");
+      if (gracebook) {
+        gracebook.classList.remove("disabled");
+        gracebook.removeAttribute("aria-disabled");
         var gracebookBase =
           window.llbBundle && window.llbBundle.gracebookUrl
             ? window.llbBundle.gracebookUrl
             : "discord-gracebook.html";
-        observe.href = gracebookBase + "?branch=" + encodeURIComponent(b.dataset.branch);
-        observe.title = "";
+        gracebook.href = gracebookBase + "?branch=" + encodeURIComponent(b.dataset.branch);
+        gracebook.title = "";
       }
     });
   });

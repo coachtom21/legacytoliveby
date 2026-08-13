@@ -40,6 +40,12 @@ $page_desc       = $config['description'];
 <a class="skip" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor-child' ); ?></a>
 
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/header.php'; ?>
+<?php
+// Fallback: Welcome should use page-llb-welcome.php; keep trifecta if Bundle is assigned.
+if ( in_array( $slug, hello_elementor_child_llb_welcome_slugs(), true ) ) {
+	include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php';
+}
+?>
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/sidebar.php'; ?>
 
 <main id="main">

@@ -111,6 +111,7 @@ The Human Gold Rush statement centers gratitude as the “1% that no amount of m
 - XP does not hold dollars, crypto, debt or redeemable financial value.
 - The VFN statement is a non-custodial comparison testament supplied by the MEGAvoter acting as VFN.
 - Walk Away is valid behavioral evidence, not an unsuccessful conversion.
+- **Research equality:** never use plain `=` in monetary/XP/YAM/NWP formulas — use dotted `≐` only (see `RESEARCH-EQUALITY.md`).
 
 These should become **automated tests and administrative warnings** — not merely paragraphs in documentation.
 

@@ -16,10 +16,11 @@ require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 
 $landing_url      = hello_elementor_child_hgr_landing_url();
-$rsvp_url         = hello_elementor_child_hgr_touchstone_order_url();
+$welcome_url      = hello_elementor_child_llb_welcome_url( 'welcome' );
+$rsvp_url         = $welcome_url; // RSVP / reserve → Welcome #welcome
 $laugh_url        = hello_elementor_child_llb_page_url( 'laugh-events' );
 $organizers_url   = hello_elementor_child_llb_page_url( 'prepare-laugh-event' );
-$bundle_welcome   = hello_elementor_child_llb_welcome_url( 'welcome' );
+$bundle_welcome   = $welcome_url;
 $hbc_url          = hello_elementor_child_hbc_register_url();
 $faith_url        = hello_elementor_child_llb_page_url( 'tigers-eye-covenant' );
 $discord_url      = hello_elementor_child_llb_discord_url();
@@ -58,6 +59,8 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 	</nav>
 </header>
 
+<?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
+
 <main>
 	<section class="gw-hero" id="welcome" aria-labelledby="welcome-title">
 		<div class="gw-hero-inner gw-container">
@@ -78,8 +81,6 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 			</div>
 		</div>
 	</section>
-
-	<?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
 
 	<section class="gw-onboard gw-section" aria-labelledby="onboard-title">
 		<div class="gw-container">
@@ -334,7 +335,7 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 			<a href="<?php echo esc_url( $organizers_url ); ?>"><?php esc_html_e( 'For organizers', 'hello-elementor-child' ); ?></a>
 		</div>
 	</div>
-	<div class="gw-fineprint gw-container"><?php esc_html_e( 'Practice FAITH touchstones are complimentary. XP means Experience Presence and is not currency, legal tender, or a measure of human worth. Participation is voluntary.', 'hello-elementor-child' ); ?></div>
+	<div class="gw-fineprint gw-container"><?php esc_html_e( 'Practice FAITH touchstones are complimentary. XP means Experience Presence and is not currency, legal tender, or a measure of human worth. Any dollar figures shown beside XP use research comparison only (≐), never convertible redemption. Participation is voluntary.', 'hello-elementor-child' ); ?></div>
 </footer>
 
 <?php wp_footer(); ?>

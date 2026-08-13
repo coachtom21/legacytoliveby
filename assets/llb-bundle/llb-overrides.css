@@ -360,3 +360,32 @@ body.llb-bundle-body .llb-trifecta {
     justify-content: center;
   }
 }
+
+/* Welcome — YAM’er observe path */
+.yam-lead {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: 42rem;
+}
+
+.yam-discord-wrap {
+  margin: 16px 0 28px;
+}
+
+.yam-discord-wrap .cta-yam {
+  display: inline-flex;
+}
+
+.rsvp-email .rsvp-note {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+#yam-observe {
+  scroll-margin-top: 88px;
+}

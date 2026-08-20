@@ -3,7 +3,7 @@
  * Template Name: Human Gold Rush
  * Template Post Type: page
  *
- * Site landing page: First Principle video, hero, and Learn more media.
+ * Site landing page: Oligopoly video, hero, and Practice FAITH postcard.
  * Used automatically at /. Do not use for the Welcome lesson page.
  *
  * @package HelloElementorChild
@@ -17,6 +17,12 @@ require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 
 $join_url        = hello_elementor_child_hgr_join_url();
+$welcome_url     = hello_elementor_child_llb_welcome_url( 'welcome' );
+$video_url       = hello_elementor_child_hgr_first_principle_video_url();
+$postcard_img    = hello_elementor_child_hgr_postcard_image_url();
+$postcard_pdf    = hello_elementor_child_hgr_postcard_pdf_url();
+$postcard_qr     = hello_elementor_child_hgr_rsvp_qr_url();
+$postcard_scan   = hello_elementor_child_hgr_postcard_scan_url();
 $llb_brand_url   = home_url( '/' );
 $llb_active_file = '';
 ?><!DOCTYPE html>
@@ -47,6 +53,10 @@ $llb_active_file = '';
 			</div>
 		</div>
 
+		<div class="hgr-wrap" id="coach-tom-welcome">
+			<?php hello_elementor_child_render_coach_tom_welcome(); ?>
+		</div>
+
 		<section class="hgr-video" aria-label="<?php esc_attr_e( 'The First Principle', 'hello-elementor-child' ); ?>">
 			<div class="hgr-video-frame hgr-reveal">
 				<video
@@ -55,7 +65,7 @@ $llb_active_file = '';
 					playsinline
 					preload="metadata"
 				>
-					<source src="https://legacytoliveby.org/wp-content/uploads/2026/07/The_First_Principle.mp4" type="video/mp4">
+					<source src="<?php echo esc_url( $video_url ); ?>" type="video/mp4">
 					<?php esc_html_e( 'Your browser does not support the video tag.', 'hello-elementor-child' ); ?>
 				</video>
 			</div>
@@ -98,7 +108,32 @@ $llb_active_file = '';
 			</section>
 
 			<section class="hgr-postcard" aria-labelledby="postcard-title">
-				<h2 id="postcard-title" class="screen-reader-text"><?php esc_html_e( 'Practice FAITH postcard', 'hello-elementor-child' ); ?></h2>
+				<h2 id="postcard-title"><?php esc_html_e( 'Practice FAITH postcard', 'hello-elementor-child' ); ?></h2>
+				<div class="hgr-postcard-pair">
+					<figure class="hgr-postcard-media">
+						<img
+							src="<?php echo esc_url( $postcard_img ); ?>"
+							alt="<?php esc_attr_e( 'Human Gold Rush RSVP postcard', 'hello-elementor-child' ); ?>"
+							width="1400"
+							height="900"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
+					<figure class="hgr-postcard-qr">
+						<a href="<?php echo esc_url( $postcard_scan ); ?>" target="_blank" rel="noopener noreferrer">
+							<img
+								src="<?php echo esc_url( $postcard_qr ); ?>"
+								alt="<?php esc_attr_e( 'Human Gold RSVP code — scan to open megavoters.com', 'hello-elementor-child' ); ?>"
+								width="512"
+								height="669"
+								loading="lazy"
+								decoding="async"
+							>
+						</a>
+						<figcaption><?php esc_html_e( 'Human Gold RSVP — scan to megavoters.com', 'hello-elementor-child' ); ?></figcaption>
+					</figure>
+				</div>
 				<blockquote class="hgr-postcard-quote">
 					<p><?php esc_html_e( 'Could you Practice FAITH by being Fair, Accepting, Insightful, Transparent, and Humble in your relationships with others?', 'hello-elementor-child' ); ?></p>
 					<p><?php esc_html_e( 'If so, here’s a postcard.', 'hello-elementor-child' ); ?></p>
@@ -108,7 +143,8 @@ $llb_active_file = '';
 				</blockquote>
 				<p class="hgr-postcard-gratitude"><?php esc_html_e( 'Sharing your time with us means more than money ever could. In return, we offer gratitude—not money—recorded as XP: Experience Presence. It simply recognizes that you showed up.', 'hello-elementor-child' ); ?></p>
 				<div class="hgr-cta-row">
-					<a class="hgr-btn hgr-btn-primary" href="<?php echo esc_url( $join_url ); ?>"><?php esc_html_e( 'Join the rush', 'hello-elementor-child' ); ?></a>
+					<a class="hgr-btn hgr-btn-primary" href="<?php echo esc_url( $welcome_url ); ?>"><?php esc_html_e( 'RSVP for your touchstone', 'hello-elementor-child' ); ?></a>
+					<a class="hgr-btn hgr-btn-ghost" href="<?php echo esc_url( $postcard_pdf ); ?>" download><?php esc_html_e( 'Download postcard PDF', 'hello-elementor-child' ); ?></a>
 				</div>
 			</section>
 

@@ -1,0 +1,261 @@
+/* Treasured Penny — client layout, LLB bundle tokens */
+.llb-penny-page {
+	max-width: 960px;
+}
+
+.llb-penny-hero {
+	display: grid;
+	grid-template-columns: 1.05fr 0.95fr;
+	gap: 36px;
+	align-items: start;
+	margin-bottom: 48px;
+}
+
+.llb-penny-hero h1 {
+	font: 500 clamp(42px, 6vw, 72px) / 0.98 "Playfair Display", Georgia, serif;
+	letter-spacing: -0.04em;
+	margin: 0 0 18px;
+	color: var(--ink);
+}
+
+.llb-penny-hero h1 em {
+	color: var(--amber);
+	font-style: italic;
+}
+
+.llb-penny-card {
+	position: relative;
+	padding: 28px 24px 26px;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: var(--card);
+}
+
+.llb-penny-stamp {
+	margin: 0 0 12px;
+	color: var(--amber);
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.llb-penny-coin {
+	display: grid;
+	place-items: center;
+	width: 132px;
+	height: 132px;
+	margin: 12px auto 18px;
+	border: 3px solid #8a5a24;
+	border-radius: 50%;
+	color: #4c2c0b;
+	background: #d99b31;
+	font: 700 48px/1 "Playfair Display", Georgia, serif;
+}
+
+.llb-penny-card h2 {
+	font: 700 22px "Playfair Display", Georgia, serif;
+	margin: 0 0 10px;
+}
+
+.llb-penny-card p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.llb-penny-faith {
+	padding: 36px 28px;
+	margin: 0 0 48px;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: #efe5d1;
+	text-align: center;
+}
+
+.llb-penny-faith h2 {
+	font: 700 clamp(28px, 4vw, 40px) / 1.12 "Playfair Display", Georgia, serif;
+	margin: 0 0 14px;
+}
+
+.llb-penny-faith > p {
+	max-width: 720px;
+	margin: 0 auto 22px;
+	color: #455065;
+}
+
+.llb-penny-words {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+.llb-penny-words span {
+	padding: 8px 14px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: var(--card);
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.llb-penny-process {
+	margin-bottom: 48px;
+}
+
+.llb-penny-process h2,
+.llb-penny-levels h2 {
+	font: 700 clamp(28px, 4vw, 40px) / 1.12 "Playfair Display", Georgia, serif;
+	margin: 0 0 14px;
+}
+
+.llb-penny-process .intro {
+	margin-bottom: 8px;
+}
+
+.llb-penny-wink {
+	padding: 36px 32px;
+	margin: 0 0 48px;
+	border-radius: 12px;
+	background: var(--nav);
+	color: #d8dfeb;
+}
+
+.llb-penny-wink .eyebrow {
+	color: var(--gold);
+}
+
+.llb-penny-wink h2 {
+	font: 700 clamp(28px, 4vw, 42px) / 1.12 "Playfair Display", Georgia, serif;
+	color: #fff;
+	margin: 0 0 14px;
+}
+
+.llb-penny-wink p {
+	margin: 0;
+	max-width: 720px;
+	color: #c5d0df;
+	font-size: 17px;
+}
+
+.llb-penny-levels {
+	margin-bottom: 40px;
+}
+
+.llb-penny-levels > p:not(.eyebrow) {
+	color: #455065;
+	margin: 0 0 24px;
+}
+
+.llb-penny-level-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 14px;
+}
+
+.llb-penny-level {
+	padding: 22px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	background: var(--card);
+}
+
+.llb-penny-level.is-treasure {
+	border-color: #d7b56f;
+	background: #fff5d9;
+}
+
+.llb-penny-level > span {
+	display: inline-block;
+	margin-bottom: 16px;
+	padding: 5px 9px;
+	border-radius: 999px;
+	background: #efe5d1;
+	color: var(--amber);
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.llb-penny-level.is-treasure > span {
+	background: var(--amber);
+	color: #22160a;
+}
+
+.llb-penny-level strong {
+	display: block;
+	font: 700 36px/1 "Playfair Display", Georgia, serif;
+	color: var(--ink);
+	margin-bottom: 8px;
+}
+
+.llb-penny-level h3 {
+	font: 700 18px "Playfair Display", Georgia, serif;
+	margin: 0 0 8px;
+}
+
+.llb-penny-level p {
+	margin: 0 0 12px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.llb-penny-level small {
+	color: var(--amber);
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.llb-penny-balance {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+	margin-bottom: 40px;
+}
+
+.llb-penny-balance article {
+	padding: 22px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	background: var(--card);
+}
+
+.llb-penny-balance h3 {
+	font: 700 20px "Playfair Display", Georgia, serif;
+	margin: 0 0 8px;
+}
+
+.llb-penny-balance p {
+	margin: 0;
+	color: var(--muted);
+}
+
+.llb-penny-close {
+	padding: 36px 28px;
+	margin-bottom: 28px;
+	border-radius: 12px;
+	background: var(--green);
+	color: #e8f2eb;
+	text-align: center;
+}
+
+.llb-penny-close h2 {
+	font: 700 clamp(26px, 4vw, 36px) / 1.15 "Playfair Display", Georgia, serif;
+	color: #fff;
+	margin: 0 0 12px;
+}
+
+.llb-penny-close p {
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+	.llb-penny-hero,
+	.llb-penny-level-grid,
+	.llb-penny-balance {
+		grid-template-columns: 1fr;
+	}
+}

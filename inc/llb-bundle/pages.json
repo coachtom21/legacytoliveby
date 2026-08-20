@@ -45,6 +45,15 @@
     "active_href": "human-gold-rush.html"
   },
   {
+    "file": "treasured-penny.html",
+    "slug": "treasured-penny",
+    "title": "The Treasured Penny | Legacy To Live By",
+    "description": "The Treasured Penny — a Human Gold Rush invitation from Legacy To Live By. Gratitude is accepted, not paid.",
+    "channel": "treasured-penny",
+    "channel_sub": "Human Gold Rush community learning center",
+    "active_href": "treasured-penny.html"
+  },
+  {
     "file": "laugh-events.html",
     "slug": "laugh-events",
     "title": "LAUGH Events | Legacy to Live By",

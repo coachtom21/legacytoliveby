@@ -91,12 +91,66 @@ function hello_elementor_child_hbc_register_url() {
 }
 
 /**
- * $0 touchstone backorder / RSVP entry (Host a LAUGH Event flow).
+ * Touchstone RSVP entry — Welcome lesson (#welcome), not Host a LAUGH Event.
  *
  * @return string
  */
 function hello_elementor_child_hgr_touchstone_order_url() {
-	return hello_elementor_child_llb_page_url( 'prepare-laugh-event' );
+	return hello_elementor_child_llb_welcome_url( 'welcome' );
+}
+
+/**
+ * Landing hero video — The First Principle (client: keep this on LLB index).
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_first_principle_video_url() {
+	return 'https://legacytoliveby.org/wp-content/uploads/2026/07/The_First_Principle.mp4';
+}
+
+/**
+ * Oligopoly / Community Checkers video (use on megavoters, not LLB home).
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_oligopoly_video_url() {
+	return 'https://legacytoliveby.org/wp-content/uploads/2026/08/Community_Checkers__The_LAUGH_Gathering_Blueprint.mp4';
+}
+
+/**
+ * Human Gold RSVP QR artwork (do not regenerate). Encodes megavoters.com.
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_rsvp_qr_url() {
+	return get_stylesheet_directory_uri() . '/assets/hgr/postcard/Human_Gold_RSVP.svg';
+}
+
+/**
+ * Postcard QR scan destination.
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_postcard_scan_url() {
+	return 'https://megavoters.com/';
+}
+
+/**
+ * Human Gold RSVP postcard image (front preview).
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_postcard_image_url() {
+	return get_stylesheet_directory_uri() . '/assets/hgr/postcard/human-gold-rsvp-postcard-front.jpg';
+}
+
+/**
+ * Human Gold RSVP postcard PDF download (two-sided proof).
+ *
+ * @return string
+ */
+function hello_elementor_child_hgr_postcard_pdf_url() {
+	return get_stylesheet_directory_uri() . '/assets/hgr/postcard/Human_Gold_Rush_RSVP_Postcard_Two-Sided_Proof_6x4.pdf';
 }
 
 /**

@@ -6,7 +6,7 @@
 
 	<p class="section-label">Scan the postcard, then decide</p>
 	<div class="actions">
-		<a href="prepare-laugh-event.html" class="cta-mega">Participate as a MEGAvoter<span>→</span></a>
+		<a href="https://humanblockchain.info/" class="cta-mega" target="_blank" rel="noopener noreferrer">Participate as a MEGAvoter<span>→</span></a>
 		<a href="#yam-observe" class="cta-yam" id="observe-link">Observe as a YAM’er<span>→</span></a>
 		<a href="three-ways-to-respond.html" class="cta-walk">Walk Away, No Pressure<span>→</span></a>
 	</div>
@@ -63,7 +63,10 @@
 
 	<aside class="notice">
 		<strong>Pilot status</strong>
-		<p>Human Gold Rush is currently a single production site — the Center for Entrepreneurship and Innovation (CEI) at the University of North Georgia in Dahlonega, Georgia — delivering twelve engraved touchstone varieties, including the Tiger's Eye. Expansion to 100 additional CEI-model production licenses is projected for August 11, 2027. Until then, this remains a single-site pilot. Pick-up event status is checked by scanning your postcard's registered UUID.</p>
+		<p>LegacyToLiveBy.org welcomes visitors redirected from MEGAvoters.com to join the Human Gold Rush as United Citizens exploring the spirit of a Namaste Christian—honoring the worth and presence of every person.</p>
+		<p>Under the proposed pilot, Unity Church–Atlanta would host Leaders Annual United Group Hug (LAUGH) events where guests who RSVP may receive a touchstone bearing their chosen word from the twelve-word collection.</p>
+		<p>Those wishing to participate as MEGAvoters would receive waitlist status for a Tiger’s Eye worry/prayer touchstone proposed for local production in Dahlonega, Georgia. The Center for Entrepreneurship and Innovation is being considered as a potential coordinator or overseer of the lapidary-production pilot.</p>
+		<p>All references to Unity Church–Atlanta, the Center for Entrepreneurship and Innovation, Dahlonega-based production, or any other organization, company, academic institution, group, or entity describe proposed relationships only. No affiliation, endorsement, hosting commitment, oversight role, or institutional acceptance should be inferred unless and until separately confirmed by each named party.</p>
 	</aside>
 
 	<div class="path-compare">

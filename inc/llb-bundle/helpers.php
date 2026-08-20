@@ -16,7 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function hello_elementor_child_llb_is_template() {
 	return is_page_template( 'page-llb-bundle.php' )
-		|| is_page_template( 'page-llb-welcome.php' );
+		|| is_page_template( 'page-llb-welcome.php' )
+		|| is_page_template( 'page-treasured-penny.php' )
+		|| ( is_singular( 'page' ) && 'treasured-penny' === get_post_field( 'post_name', get_queried_object_id() ) );
 }
 
 /**
@@ -91,6 +93,16 @@ function hello_elementor_child_llb_welcome_url( $fragment = '' ) {
 }
 
 /**
+ * Permalink for The Treasured Penny invitation page.
+ *
+ * @return string
+ */
+function hello_elementor_child_llb_treasured_penny_url() {
+	$page = get_page_by_path( 'treasured-penny' );
+	return $page ? get_permalink( $page ) : home_url( '/treasured-penny/' );
+}
+
+/**
  * Config for a bundle page slug.
  *
  * @param string $slug Page slug.
@@ -152,9 +164,8 @@ function hello_elementor_child_llb_discord_url() {
  */
 function hello_elementor_child_llb_rewrite_links( $html ) {
 	foreach ( hello_elementor_child_llb_url_map() as $file => $url ) {
-		$html = str_replace( 'href="' . $file . '"', 'href="' . esc_url( $url ) . '"', $html );
 		$html = preg_replace(
-			'#href="' . preg_quote( $file, '#' ) . '(\?[^"]*)"#',
+			'~href="' . preg_quote( $file, '~' ) . '((?:\?[^"#]*)?(?:#[^"]*)?)"~',
 			'href="' . esc_url( $url ) . '$1"',
 			$html
 		);
@@ -180,6 +191,7 @@ function hello_elementor_child_llb_nav_groups() {
 			'label' => 'START HERE',
 			'items' => array(
 				array( 'file' => 'human-gold-rush.html', 'label' => 'Welcome' ),
+				array( 'file' => 'treasured-penny.html', 'label' => 'Treasured Penny' ),
 				array( 'file' => 'tigers-eye-covenant.html', 'label' => "Tiger's Eye Covenant" ),
 				array( 'file' => 'three-ways-to-respond.html', 'label' => 'Three Ways to Respond' ),
 				array( 'file' => 'community-force.html', 'label' => 'Community Force' ),
@@ -226,13 +238,20 @@ function hello_elementor_child_llb_render_content( $slug ) {
 		echo '<div class="page-wrap"><p>Content not found.</p></div>';
 		return;
 	}
+
+	$has_own_wrap = ( 'treasured-penny' === $content_slug );
+
 	ob_start();
-	echo '<div class="page-wrap">';
+	if ( ! $has_own_wrap ) {
+		echo '<div class="page-wrap">';
+	}
 	include $path;
 	if ( 'llb-welcome' === hello_elementor_child_llb_normalize_slug( $slug ) ) {
 		include get_stylesheet_directory() . '/inc/llb-bundle/content/human-gold-rush-essay.php';
 	}
-	echo '</div>';
+	if ( ! $has_own_wrap ) {
+		echo '</div>';
+	}
 	$html = ob_get_clean();
 	echo hello_elementor_child_llb_rewrite_links( $html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }

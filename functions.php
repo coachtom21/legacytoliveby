@@ -14,10 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.5.2' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.5.7' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
+require_once get_stylesheet_directory() . '/inc/coach-tom-welcome.php';
 
 /**
  * Use the HGR landing template only on the site root — not on /llb-welcome/.
@@ -63,6 +64,63 @@ function hello_elementor_child_welcome_page_template( $template ) {
 	return file_exists( $welcome ) ? $welcome : $template;
 }
 add_filter( 'template_include', 'hello_elementor_child_welcome_page_template', 100 );
+
+/**
+ * Force /treasured-penny/ onto the Treasured Penny template (includes trifecta).
+ *
+ * @param string $template Path to the template file.
+ * @return string
+ */
+function hello_elementor_child_treasured_penny_page_template( $template ) {
+	if ( is_admin() || ! is_singular( 'page' ) ) {
+		return $template;
+	}
+
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	if ( 'treasured-penny' !== $slug ) {
+		return $template;
+	}
+
+	$penny = get_stylesheet_directory() . '/page-treasured-penny.php';
+
+	return file_exists( $penny ) ? $penny : $template;
+}
+add_filter( 'template_include', 'hello_elementor_child_treasured_penny_page_template', 100 );
+
+/**
+ * Publish The Treasured Penny page and assign its template.
+ *
+ * @return void
+ */
+function hello_elementor_child_ensure_treasured_penny_page() {
+	if ( get_option( 'llb_treasured_penny_page' ) === HELLO_ELEMENTOR_CHILD_VERSION ) {
+		return;
+	}
+
+	$page = get_page_by_path( 'treasured-penny' );
+	if ( $page instanceof WP_Post ) {
+		$id = (int) $page->ID;
+	} else {
+		$id = wp_insert_post(
+			array(
+				'post_title'     => __( 'The Treasured Penny', 'hello-elementor-child' ),
+				'post_name'      => 'treasured-penny',
+				'post_status'    => 'publish',
+				'post_type'      => 'page',
+				'post_content'   => '',
+				'comment_status' => 'closed',
+				'ping_status'    => 'closed',
+			)
+		);
+	}
+
+	if ( $id && ! is_wp_error( $id ) ) {
+		update_post_meta( $id, '_wp_page_template', 'page-treasured-penny.php' );
+	}
+
+	update_option( 'llb_treasured_penny_page', HELLO_ELEMENTOR_CHILD_VERSION );
+}
+add_action( 'init', 'hello_elementor_child_ensure_treasured_penny_page', 20 );
 
 /**
  * Load child theme scripts & styles.
@@ -319,6 +377,15 @@ function hello_elementor_child_llb_assets() {
 			'gracebookUrl' => hello_elementor_child_llb_page_url( 'discord-gracebook' ),
 		)
 	);
+
+	if ( is_page_template( 'page-treasured-penny.php' ) || ( is_singular( 'page' ) && 'treasured-penny' === get_post_field( 'post_name', get_queried_object_id() ) ) ) {
+		wp_enqueue_style(
+			'llb-treasured-penny',
+			get_stylesheet_directory_uri() . '/assets/llb-bundle/treasured-penny.css',
+			array( 'llb-bundle-overrides' ),
+			HELLO_ELEMENTOR_CHILD_VERSION
+		);
+	}
 
 	$dequeue = array(
 		'hello-elementor-child-style',

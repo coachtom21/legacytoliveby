@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 
-$landing_url      = hello_elementor_child_hgr_landing_url();
-$welcome_url      = hello_elementor_child_llb_welcome_url( 'welcome' );
+$landing_url      = llb_with_hbc_ctx( hello_elementor_child_hgr_landing_url() );
+$welcome_url      = llb_with_hbc_ctx( hello_elementor_child_llb_welcome_url( 'welcome' ) );
 $rsvp_url         = $welcome_url; // RSVP / reserve → Welcome #welcome
 $laugh_url        = hello_elementor_child_llb_page_url( 'laugh-events' );
 $organizers_url   = hello_elementor_child_llb_page_url( 'prepare-laugh-event' );
@@ -41,6 +41,7 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 <?php wp_body_open(); ?>
 
 <a class="gw-skip-link" href="#welcome"><?php esc_html_e( 'Skip to welcome', 'hello-elementor-child' ); ?></a>
+<?php llb_render_hbc_return_bar(); ?>
 
 <header class="gw-site-header">
 	<nav class="gw-nav gw-container" aria-label="<?php esc_attr_e( 'Main navigation', 'hello-elementor-child' ); ?>">
@@ -87,7 +88,7 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 			<div class="gw-section-heading">
 				<span class="gw-eyebrow"><?php esc_html_e( 'God Wink · Continue onboarding', 'hello-elementor-child' ); ?></span>
 				<h2 id="onboard-title"><?php esc_html_e( 'Three paths forward from here.', 'hello-elementor-child' ); ?></h2>
-				<p><?php esc_html_e( 'Register your device, reserve your complimentary touchstone, then choose your Peace Pentagon branch and touchstone word.', 'hello-elementor-child' ); ?></p>
+				<p><?php esc_html_e( 'Register your device on Human Blockchain. A touchstone and Discord Gracebook are optional invitations. Neither one is required to continue.', 'hello-elementor-child' ); ?></p>
 			</div>
 			<div class="gw-onboard-grid">
 				<article class="gw-onboard-card">
@@ -96,13 +97,13 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 					<a class="gw-btn gw-btn-outline" href="<?php echo esc_url( $hbc_url ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Open HBC.info', 'hello-elementor-child' ); ?></a>
 				</article>
 				<article class="gw-onboard-card">
-					<strong><?php esc_html_e( 'Order your touchstone', 'hello-elementor-child' ); ?></strong>
-					<p><?php esc_html_e( 'A $0 backorder records anticipated demand. No card is required.', 'hello-elementor-child' ); ?></p>
+					<strong><?php esc_html_e( 'Touchstone, if you want one', 'hello-elementor-child' ); ?></strong>
+					<p><?php esc_html_e( 'Optional. A complimentary stone is an invitation, not a step you must finish.', 'hello-elementor-child' ); ?></p>
 					<a class="gw-btn gw-btn-outline" href="<?php echo esc_url( $rsvp_url ); ?>"><?php esc_html_e( 'Reserve my free touchstone', 'hello-elementor-child' ); ?></a>
 				</article>
 				<article class="gw-onboard-card">
 					<strong><?php esc_html_e( 'Choose your branch', 'hello-elementor-child' ); ?></strong>
-					<p><?php esc_html_e( 'Select a Peace Pentagon branch to observe and pick your touchstone word.', 'hello-elementor-child' ); ?></p>
+					<p><?php esc_html_e( 'Optional. Discord Gracebook and a touchstone word can wait. You can continue without either.', 'hello-elementor-child' ); ?></p>
 					<a class="gw-btn gw-btn-outline" href="<?php echo esc_url( $bundle_welcome ); ?>"><?php esc_html_e( 'Continue to Welcome', 'hello-elementor-child' ); ?></a>
 				</article>
 			</div>

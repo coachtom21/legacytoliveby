@@ -100,12 +100,12 @@ function hello_elementor_child_hgr_touchstone_order_url() {
 }
 
 /**
- * Landing hero video — The First Principle (client: keep this on LLB index).
+ * Landing hero video — You're Invited (replaces The First Principle on LLB HGR).
  *
  * @return string
  */
 function hello_elementor_child_hgr_first_principle_video_url() {
-	return 'https://legacytoliveby.org/wp-content/uploads/2026/07/The_First_Principle.mp4';
+	return 'https://legacytoliveby.org/wp-content/uploads/2026/09/Youre-Invited-2026-09-09.mp4';
 }
 
 /**
@@ -118,7 +118,7 @@ function hello_elementor_child_hgr_oligopoly_video_url() {
 }
 
 /**
- * Human Gold RSVP QR artwork (do not regenerate). Encodes megavoters.com.
+ * Human Gold RSVP QR artwork (do not regenerate). Encodes megavoters.com/start/.
  *
  * @return string
  */
@@ -132,7 +132,7 @@ function hello_elementor_child_hgr_rsvp_qr_url() {
  * @return string
  */
 function hello_elementor_child_hgr_postcard_scan_url() {
-	return 'https://megavoters.com/';
+	return 'https://megavoters.com/start/';
 }
 
 /**

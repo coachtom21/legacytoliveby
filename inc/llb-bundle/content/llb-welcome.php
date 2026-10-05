@@ -13,7 +13,7 @@
 
 	<div class="pentagon" id="yam-observe">
 		<p class="section-label">YAM’er path — complimentary touchstone</p>
-		<p class="yam-lead">Observers join free. Pick a Peace Pentagon branch for Discord Gracebook, then choose the one touchstone word that resonates with you. <strong>Your word selection is the 1-stone giveaway RSVP</strong> for this pilot — no payment, no Everful checkout.</p>
+		<p class="yam-lead">Observers join free. A Peace Pentagon branch, Discord Gracebook, and a touchstone word are optional invitations. None of them is required to look around or to return to your Human Blockchain event. No payment, no Everful checkout.</p>
 
 		<p class="section-label">1 · Peace Pentagon branch</p>
 		<div class="pentagon-branches" role="group" aria-label="Peace Pentagon branch">
@@ -23,7 +23,7 @@
 			<button type="button" data-branch="distribution">Distribution</button>
 			<button type="button" data-branch="membership">Membership</button>
 		</div>
-		<small>YAM’ers choose a branch to enter that Discord Gracebook community. MEGAvoters may pick a branch too; it isn’t required to Participate.</small>
+		<small>Discord Gracebook is optional. You can skip the branch and still continue.</small>
 
 		<p class="yam-discord-wrap">
 			<a href="#" class="cta-yam disabled" id="gracebook-link" aria-disabled="true" title="Choose a Peace Pentagon branch first">Join Discord Gracebook for this branch<span>→</span></a>
@@ -32,7 +32,7 @@
 		<form class="rsvp-email" id="yam-stone-rsvp" action="#" method="post">
 			<p class="section-label">2 · Choose your touchstone word</p>
 			<label for="rsvp-stone" class="stone-label">This reserves your complimentary Practice FAITH stone</label>
-			<select id="rsvp-stone" name="touchstone" required>
+			<select id="rsvp-stone" name="touchstone">
 				<option value="">Pick a word that speaks to you…</option>
 				<option value="courage">Courage (Tiger’s Eye)</option>
 				<option value="kindness">Kindness (Obsidian)</option>
@@ -48,7 +48,7 @@
 				<option value="healing">Healing (Opal)</option>
 				<option value="not_yet">Not ready to accept a FAITH stone yet</option>
 			</select>
-			<small>One complimentary stone per YAM’er path — not a set of twelve to collect. Choose “not ready yet” if you prefer to wait; nothing expires.</small>
+			<small>Optional. One complimentary stone if you want one — not a set of twelve to collect. Leave this blank, or choose “not ready yet.” Nothing expires, and skipping it does not block you.</small>
 
 			<label for="rsvp-email">Email for your stone reservation</label>
 			<div class="rsvp-row">
@@ -63,10 +63,10 @@
 
 	<aside class="notice">
 		<strong>Pilot status</strong>
-		<p>LegacyToLiveBy.org welcomes visitors redirected from MEGAvoters.com to join the Human Gold Rush as United Citizens exploring the spirit of a Namaste Christian—honoring the worth and presence of every person.</p>
-		<p>Under the proposed pilot, Unity Church–Atlanta would host Leaders Annual United Group Hug (LAUGH) events where guests who RSVP may receive a touchstone bearing their chosen word from the twelve-word collection.</p>
-		<p>Those wishing to participate as MEGAvoters would receive waitlist status for a Tiger’s Eye worry/prayer touchstone proposed for local production in Dahlonega, Georgia. The Center for Entrepreneurship and Innovation is being considered as a potential coordinator or overseer of the lapidary-production pilot.</p>
-		<p>All references to Unity Church–Atlanta, the Center for Entrepreneurship and Innovation, Dahlonega-based production, or any other organization, company, academic institution, group, or entity describe proposed relationships only. No affiliation, endorsement, hosting commitment, oversight role, or institutional acceptance should be inferred unless and until separately confirmed by each named party.</p>
+		<p>LegacyToLiveBy.org welcomes visitors redirected from MEGAvoters.com to join the Human Gold Rush as United Citizens—honoring the worth and presence of every person.</p>
+		<p>Under the proposed pilot, Leaders Annual United Group Hug (LAUGH) events would welcome guests who RSVP and may receive a touchstone bearing their chosen word from the twelve-word collection.</p>
+		<p>Those wishing to participate as MEGAvoters would receive waitlist status for a Tiger’s Eye worry/prayer touchstone proposed for local production in Stone Mountain, Georgia. The Center for Entrepreneurship and Innovation is being considered as a potential coordinator or overseer of the lapidary-production pilot.</p>
+		<p>All references to the Center for Entrepreneurship and Innovation, Stone Mountain–based production, or any other organization, company, academic institution, group, or entity describe proposed relationships only. No affiliation, endorsement, hosting commitment, oversight role, or institutional acceptance should be inferred unless and until separately confirmed by each named party.</p>
 	</aside>
 
 	<div class="path-compare">
@@ -76,8 +76,8 @@
 				<h3>YAM’er (Observer) — “You And Me”</h3>
 				<ul>
 					<li>Free to observe — no membership fee</li>
-					<li>Choose your touchstone word = complimentary 1-stone RSVP</li>
-					<li>Pick a Peace Pentagon branch in Discord Gracebook</li>
+					<li>Optional: choose a touchstone word for a complimentary stone</li>
+					<li>Optional: pick a Peace Pentagon branch for Discord Gracebook</li>
 					<li>Attend LAUGH events; leave anytime</li>
 					<li>No fiscal seller role; no Everful order required</li>
 				</ul>

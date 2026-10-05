@@ -14,10 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.5.7' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '3.5.8' );
 
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
+require_once get_stylesheet_directory() . '/inc/hbc-return.php';
 require_once get_stylesheet_directory() . '/inc/coach-tom-welcome.php';
 
 /**

@@ -16,8 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once get_stylesheet_directory() . '/inc/hgr-template-helpers.php';
 require_once get_stylesheet_directory() . '/inc/llb-bundle/helpers.php';
 
-$join_url        = hello_elementor_child_hgr_join_url();
-$welcome_url     = hello_elementor_child_llb_welcome_url( 'welcome' );
+$join_url        = llb_with_hbc_ctx( hello_elementor_child_hgr_join_url() );
+$welcome_url     = llb_with_hbc_ctx( hello_elementor_child_llb_welcome_url( 'welcome' ) );
 $video_url       = hello_elementor_child_hgr_first_principle_video_url();
 $postcard_img    = hello_elementor_child_hgr_postcard_image_url();
 $postcard_pdf    = hello_elementor_child_hgr_postcard_pdf_url();
@@ -39,6 +39,7 @@ $llb_active_file = '';
 <a class="skip" href="#main"><?php esc_html_e( 'Skip to content', 'hello-elementor-child' ); ?></a>
 
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/header.php'; ?>
+<?php llb_render_hbc_return_bar(); ?>
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/trifecta.php'; ?>
 <?php include get_stylesheet_directory() . '/inc/llb-bundle/sidebar.php'; ?>
 		<div class="hgr-wrap hgr-hero">
@@ -46,7 +47,7 @@ $llb_active_file = '';
 			<h1 class="hgr-reveal hgr-reveal-delay-1"><?php esc_html_e( 'Show up. Strike gold. Carry the proof.', 'hello-elementor-child' ); ?></h1>
 			<p class="hgr-tagline hgr-reveal hgr-reveal-delay-2"><?php esc_html_e( 'A research project on presence, covenant, and gratitude.', 'hello-elementor-child' ); ?></p>
 			<p class="hgr-welcome hgr-reveal hgr-reveal-delay-2"><?php esc_html_e( "Welcome. Whenever you're ready, there's a stone waiting for your hand.", 'hello-elementor-child' ); ?></p>
-			<p class="hgr-desc hgr-reveal hgr-reveal-delay-3"><?php esc_html_e( "Human Gold Rush is a research project built around one mechanic: showing up. Each touchstone is tied to a Practice FAITH covenant. RSVP your intent, then prove you showed up within 50 meters and 3 minutes of acceptance, and you strike gold — earning a Tiger's Eye touchstone as physical proof. No money changes hands anywhere in this project.", 'hello-elementor-child' ); ?></p>
+			<p class="hgr-desc hgr-reveal hgr-reveal-delay-3"><?php esc_html_e( "Human Gold Rush is a research project built around one mechanic: showing up. Each touchstone is tied to a Practice FAITH covenant. RSVP your intent, then prove you showed up within 50 meters and five minutes of acceptance, and you strike gold — earning a Tiger's Eye touchstone as physical proof. No money changes hands anywhere in this project.", 'hello-elementor-child' ); ?></p>
 			<div class="hgr-cta-row hgr-reveal hgr-reveal-delay-4">
 				<a class="hgr-btn hgr-btn-primary" href="<?php echo esc_url( $join_url ); ?>"><?php esc_html_e( 'Join the rush', 'hello-elementor-child' ); ?></a>
 				<a class="hgr-btn hgr-btn-ghost" href="#steps"><?php esc_html_e( 'How it works', 'hello-elementor-child' ); ?></a>
@@ -57,7 +58,7 @@ $llb_active_file = '';
 			<?php hello_elementor_child_render_coach_tom_welcome(); ?>
 		</div>
 
-		<section class="hgr-video" aria-label="<?php esc_attr_e( 'The First Principle', 'hello-elementor-child' ); ?>">
+		<section class="hgr-video" aria-label="<?php esc_attr_e( "You're Invited", 'hello-elementor-child' ); ?>">
 			<div class="hgr-video-frame hgr-reveal">
 				<video
 					class="hgr-video-player"
@@ -69,7 +70,7 @@ $llb_active_file = '';
 					<?php esc_html_e( 'Your browser does not support the video tag.', 'hello-elementor-child' ); ?>
 				</video>
 			</div>
-			<p class="hgr-video-caption"><?php esc_html_e( 'The First Principle', 'hello-elementor-child' ); ?></p>
+			<p class="hgr-video-caption"><?php esc_html_e( "You're Invited", 'hello-elementor-child' ); ?></p>
 		</section>
 
 		<div class="hgr-wrap">
@@ -84,7 +85,7 @@ $llb_active_file = '';
 					<div class="hgr-step">
 						<div class="hgr-step-num">2</div>
 						<h3><?php esc_html_e( 'Claim window opens', 'hello-elementor-child' ); ?></h3>
-						<p><?php esc_html_e( 'Acceptance opens a 50m / 3-minute window to prove you showed up.', 'hello-elementor-child' ); ?></p>
+						<p><?php esc_html_e( 'Acceptance opens a 50m / five-minute window to prove you showed up.', 'hello-elementor-child' ); ?></p>
 					</div>
 					<div class="hgr-step">
 						<div class="hgr-step-num">3</div>
@@ -124,14 +125,14 @@ $llb_active_file = '';
 						<a href="<?php echo esc_url( $postcard_scan ); ?>" target="_blank" rel="noopener noreferrer">
 							<img
 								src="<?php echo esc_url( $postcard_qr ); ?>"
-								alt="<?php esc_attr_e( 'Human Gold RSVP code — scan to open megavoters.com', 'hello-elementor-child' ); ?>"
+								alt="<?php esc_attr_e( 'Human Gold RSVP code — scan to open megavoters.com/start/', 'hello-elementor-child' ); ?>"
 								width="512"
 								height="669"
 								loading="lazy"
 								decoding="async"
 							>
 						</a>
-						<figcaption><?php esc_html_e( 'Human Gold RSVP — scan to megavoters.com', 'hello-elementor-child' ); ?></figcaption>
+						<figcaption><?php esc_html_e( 'Human Gold RSVP — scan to megavoters.com/start/', 'hello-elementor-child' ); ?></figcaption>
 					</figure>
 				</div>
 				<blockquote class="hgr-postcard-quote">

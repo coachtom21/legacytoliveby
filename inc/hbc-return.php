@@ -74,6 +74,78 @@ function llb_hbc_event_return_url() {
 }
 
 /**
+ * Human Gold touchstones page for this environment.
+ *
+ * @return string
+ */
+function llb_humangold_welcome_url() {
+	$host = (string) wp_parse_url( home_url( '/' ), PHP_URL_HOST );
+	if ( preg_match( '/\.local$|localhost$/', $host ) ) {
+		return 'http://humangold.local/welcome/';
+	}
+
+	return 'https://humangold.org/welcome/';
+}
+
+/**
+ * Allow the welcome redirect to leave this site for Human Gold.
+ *
+ * @param string[] $hosts Allowed hosts.
+ * @return string[]
+ */
+function llb_allow_humangold_redirect( $hosts ) {
+	$hosts[] = 'humangold.org';
+	$hosts[] = 'www.humangold.org';
+	$hosts[] = 'humangold.local';
+
+	return $hosts;
+}
+add_filter( 'allowed_redirect_hosts', 'llb_allow_humangold_redirect' );
+
+/**
+ * Send /llb-welcome/ and /human-gold-rush/ to the Human Gold touchstones page.
+ *
+ * @return void
+ */
+function llb_redirect_welcome_to_humangold() {
+	if ( is_admin() || wp_doing_ajax() || ! is_singular( 'page' ) ) {
+		return;
+	}
+
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	if ( ! in_array( $slug, hello_elementor_child_llb_welcome_slugs(), true ) ) {
+		return;
+	}
+
+	$args = array();
+	foreach ( array( 'hbc_ctx', 'org', 'event' ) as $key ) {
+		if ( ! isset( $_GET[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			continue;
+		}
+		$value = sanitize_text_field( wp_unslash( (string) $_GET[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( '' === $value ) {
+			continue;
+		}
+		if ( 'hbc_ctx' === $key && ! preg_match( '/^[A-Za-z0-9_-]{16,256}$/', $value ) ) {
+			continue;
+		}
+		if ( 'hbc_ctx' !== $key && ! preg_match( '/^[A-Za-z0-9_-]{1,80}$/', $value ) ) {
+			continue;
+		}
+		$args[ $key ] = $value;
+	}
+
+	$url = llb_humangold_welcome_url();
+	if ( $args ) {
+		$url = add_query_arg( $args, $url );
+	}
+
+	wp_safe_redirect( $url, 302 );
+	exit;
+}
+add_action( 'template_redirect', 'llb_redirect_welcome_to_humangold', 0 );
+
+/**
  * Return bar. Renders only when the visitor arrived from a Human Blockchain event.
  *
  * @return void

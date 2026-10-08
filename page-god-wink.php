@@ -160,13 +160,13 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 			<div class="gw-path-grid">
 				<article class="gw-path-card gw-observe">
 					<span class="gw-path-number">01</span>
-					<h3><?php esc_html_e( 'Observe as a YAM’er', 'hello-elementor-child' ); ?></h3>
+					<h3><?php esc_html_e( 'Observe as a Nugget', 'hello-elementor-child' ); ?></h3>
 					<p><?php esc_html_e( 'Reserve a complimentary Practice FAITH touchstone, attend as a curious observer, and choose a Peace Pentagon branch you may want to learn from or mentor.', 'hello-elementor-child' ); ?></p>
 					<p class="gw-micro"><?php esc_html_e( 'Free observer path · No fiscal responsibility', 'hello-elementor-child' ); ?></p>
 				</article>
 				<article class="gw-path-card gw-participate">
 					<span class="gw-path-number">02</span>
-					<h3><?php esc_html_e( 'Participate as a MEGAvoter', 'hello-elementor-child' ); ?></h3>
+					<h3><?php esc_html_e( 'Participate as a Miner', 'hello-elementor-child' ); ?></h3>
 					<p><?php esc_html_e( 'Step forward as a messenger and co-creator. A voluntary $12 annual membership pledge adds responsibility and community voice; it is a pledge, not a payment at signup.', 'hello-elementor-child' ); ?></p>
 					<p class="gw-micro"><?php esc_html_e( 'Participant path · Tiger’s Eye waitlist follows RSVP', 'hello-elementor-child' ); ?></p>
 				</article>
@@ -206,7 +206,7 @@ $media_pdf        = 'https://drive.google.com/file/d/1y6qcKz8JnjvwHom_X1SX5U-OBS
 				<article class="gw-step">
 					<span class="gw-step-icon">4</span>
 					<h3><?php esc_html_e( 'Return for LAUGH', 'hello-elementor-child' ); ?></h3>
-					<p><?php esc_html_e( 'Scan again to see whether local pickup is scheduled. Continue as a YAM’er Observer or voluntary MEGAvoter Participant. Your selection is reserved only for your RSVP.', 'hello-elementor-child' ); ?></p>
+					<p><?php esc_html_e( 'Scan again to see whether local pickup is scheduled. Continue as a Nugget Observer or voluntary Miner Participant. Your selection is reserved only for your RSVP.', 'hello-elementor-child' ); ?></p>
 				</article>
 				<article class="gw-step">
 					<span class="gw-step-icon">5</span>

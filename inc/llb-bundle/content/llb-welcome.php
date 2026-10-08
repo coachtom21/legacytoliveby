@@ -6,13 +6,13 @@
 
 	<p class="section-label">Scan the postcard, then decide</p>
 	<div class="actions">
-		<a href="https://humanblockchain.info/" class="cta-mega" target="_blank" rel="noopener noreferrer">Participate as a MEGAvoter<span>→</span></a>
-		<a href="#yam-observe" class="cta-yam" id="observe-link">Observe as a YAM’er<span>→</span></a>
+		<a href="https://humanblockchain.info/" class="cta-mega" target="_blank" rel="noopener noreferrer">Participate as a Miner<span>→</span></a>
+		<a href="#yam-observe" class="cta-yam" id="observe-link">Observe as a Nugget<span>→</span></a>
 		<a href="three-ways-to-respond.html" class="cta-walk">Walk Away, No Pressure<span>→</span></a>
 	</div>
 
 	<div class="pentagon" id="yam-observe">
-		<p class="section-label">YAM’er path — complimentary touchstone</p>
+		<p class="section-label">Nugget path — complimentary touchstone</p>
 		<p class="yam-lead">Observers join free. A Peace Pentagon branch, Discord Gracebook, and a touchstone word are optional invitations. None of them is required to look around or to return to your Human Blockchain event. No payment, no Everful checkout.</p>
 
 		<p class="section-label">1 · Peace Pentagon branch</p>
@@ -57,7 +57,7 @@
 				<input type="hidden" name="membership_path" value="yamer">
 				<button type="submit">Reserve my complimentary stone<span>→</span></button>
 			</div>
-			<small class="rsvp-note">Pilot note: MEGAvoter stone / kit orders are collected separately after registration — we are not routing multi-stone orders through Everful at this time.</small>
+			<small class="rsvp-note">Pilot note: Miner stone / kit orders are collected separately after registration — we are not routing multi-stone orders through Everful at this time.</small>
 		</form>
 	</div>
 
@@ -65,7 +65,7 @@
 		<strong>Pilot status</strong>
 		<p>LegacyToLiveBy.org welcomes visitors redirected from MEGAvoters.com to join the Human Gold Rush as United Citizens—honoring the worth and presence of every person.</p>
 		<p>Under the proposed pilot, Leaders Annual United Group Hug (LAUGH) events would welcome guests who RSVP and may receive a touchstone bearing their chosen word from the twelve-word collection.</p>
-		<p>Those wishing to participate as MEGAvoters would receive waitlist status for a Tiger’s Eye worry/prayer touchstone proposed for local production in Stone Mountain, Georgia. The Center for Entrepreneurship and Innovation is being considered as a potential coordinator or overseer of the lapidary-production pilot.</p>
+		<p>Those wishing to participate as Miners would receive waitlist status for a Tiger’s Eye worry/prayer touchstone proposed for local production in Stone Mountain, Georgia. The Center for Entrepreneurship and Innovation is being considered as a potential coordinator or overseer of the lapidary-production pilot.</p>
 		<p>All references to the Center for Entrepreneurship and Innovation, Stone Mountain–based production, or any other organization, company, academic institution, group, or entity describe proposed relationships only. No affiliation, endorsement, hosting commitment, oversight role, or institutional acceptance should be inferred unless and until separately confirmed by each named party.</p>
 	</aside>
 
@@ -73,7 +73,7 @@
 		<p class="section-label">You’re invited — one postcard, one QR scan manages your whole RSVP</p>
 		<div class="path-grid">
 			<div class="path-card">
-				<h3>YAM’er (Observer) — “You And Me”</h3>
+				<h3>Nugget (Observer) — “You And Me”</h3>
 				<ul>
 					<li>Free to observe — no membership fee</li>
 					<li>Optional: choose a touchstone word for a complimentary stone</li>
@@ -83,7 +83,7 @@
 				</ul>
 			</div>
 			<div class="path-card gold">
-				<h3>MEGAvoter (Participant / Seller / Messenger) — $12/year pledge</h3>
+				<h3>Miner (Participant / Seller / Messenger) — $12/year pledge</h3>
 				<ul>
 					<li>Participant path with seller/giver eligibility</li>
 					<li>Stone / kit interest collected after registration (pilot)</li>
@@ -102,10 +102,10 @@
 	<article><span>03</span><div><h2>One twelve-week window</h2><p>Each quarter is a continuous twelve-week observation and maturity window. Activity accumulates throughout the whole period; it is not divided into prescribed participant phases.</p></div></article>
 	<article><span>04</span><div><h2>Trade value without money</h2><p>Seeking Gratitude recognizes presence, contribution, and fulfillment. It may carry trade value, but gratitude is never accepted as payment, currency, credit, or a financial claim.</p></div></article>
 	<article><span>05</span><div><h2>A pet rock, Pokémon-GO style</h2><p>Human Gold Rush borrows two familiar ideas — a pet rock’s meaning-from-nothing charm and a location-based scavenger hunt — to study whether people show up. Three universal QR codes (Identity, Banking/YAM-is-ON, Thanking/Seeking Gratitude) and a registered smartphone replace the app store purchase with a real handshake.</p></div></article>
-	<article><span>06</span><div><h2>Becoming a beacon</h2><p>You don’t have to already be a MEGAvoter, a YAM’er, or anything else to become a beacon in this study — that happens the moment your device registers on its first scan. From then on, your presence, not your identity, is what other nearby scans can corroborate against, the same witness-weighting that confirms a genuine LAUGH-event pickup.</p></div></article>
+	<article><span>06</span><div><h2>Becoming a beacon</h2><p>You don’t have to already be a Miner, a Nugget, or anything else to become a beacon in this study — that happens the moment your device registers on its first scan. From then on, your presence, not your identity, is what other nearby scans can corroborate against, the same witness-weighting that confirms a genuine LAUGH-event pickup.</p></div></article>
 </section>
 
 <section class="content-grid">
-	<article><span>07</span><div><h2>One seller, two tools</h2><p>A MEGAvoter seller may use YAM-is-ON to collect $30 for an item or service, or Seeking Gratitude to distribute an item or service without accepting money. Each confirmed unit resolves to only one rail.</p></div></article>
+	<article><span>07</span><div><h2>One seller, two tools</h2><p>A Miner seller may use YAM-is-ON to collect $30 for an item or service, or Seeking Gratitude to distribute an item or service without accepting money. Each confirmed unit resolves to only one rail.</p></div></article>
 	<article><span>08</span><div><h2>A public testament</h2><p>Acting as VFN, the seller posts a monthly statement of YAM-is-ON obligations to the XP General Ledger. The statement records fiat activity for comparison; the ledger never holds the seller’s funds.</p></div></article>
 </section>
